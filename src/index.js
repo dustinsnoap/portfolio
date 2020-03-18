@@ -1,14 +1,20 @@
+//imports
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/App'
 
+//views
+import Portfolio from './views/Portfolio'
+
+//style
 import GlobalStyle from './style/global_style'
+
+//init
 const root = document.getElementById('portfolio')
 
 ReactDOM.render(
   <div>
     <GlobalStyle/>
-    <App />
+    <Portfolio />
   </div>,
   root
 )
