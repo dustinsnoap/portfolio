@@ -1,8 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import App from './components/App'
+
+import GlobalStyle from './style/global_style'
+const root = document.getElementById('portfolio')
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('portfolio')
+  <div>
+    <GlobalStyle/>
+    <App />
+  </div>,
+  root
 )
