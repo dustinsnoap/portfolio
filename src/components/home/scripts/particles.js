@@ -1,12 +1,12 @@
 class Particle {
-  constructor(ctx, radius, screen, color, gravity) {
+  constructor(ctx, radius, screen, color) {
     this.ctx = ctx
     this.screen = screen
     this.x = this.randInt(0, this.screen.width)
     this.y = this.randInt(0, this.screen.height)
     this.color = color
     this.radius = this.randInt(radius*.75, radius*1.25)
-    this.velocity = {x: 0, y: gravity}
+    this.velocity = {x: 0, y: this.randInt(this.radius/2, this.radius)}
   }
   randInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
   update_position() {
@@ -45,7 +45,7 @@ class Particle {
 }
 
 class Particles {
-  constructor(particle_density, particle_size) {
+  constructor(particle_density, particle_size, particle_color) {
     this.canvas = document.getElementById('canvas')
     this.ctx = this.canvas.getContext('2d')
     this.screen = {width: canvas.width = window.innerWidth, height: canvas.height = window.innerHeight}
@@ -53,10 +53,11 @@ class Particles {
     this.particle_density = particle_density
     this.particle_num = this.get_particle_num()
     this.particle_size = particle_size
+    this.particle_color = particle_color
     this.create_particles(this.particle_num)
   }
   create_particles = (particle_num) => {
-    for(let i=0; i<particle_num; i++) this.particles.push(new Particle(this.ctx, 10, this.screen, '0,0,0', this.randInt(5,15)))
+    for(let i=0; i<particle_num; i++) this.particles.push(new Particle(this.ctx, this.particle_size, this.screen, this.particle_color))
   }
   get_particle_num = () => Math.floor(this.screen.width * this.particle_density)
   randInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
@@ -73,6 +74,6 @@ class Particles {
   }
 }
 
-particles = new Particles(.1, 10)
+particles = new Particles(.1, 10, '0,32,64')
 setInterval(() => particles.render(), 1000/30)
 window.addEventListener('resize', () => particles.resize())
