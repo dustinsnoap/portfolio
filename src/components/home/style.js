@@ -6,6 +6,7 @@ export default Styled.section`
     h1 {
         font-size: 10em;
         color: #ccc;
+        font-family: 'monsterrat';
     }
     .particles {
         background-color: #333;
