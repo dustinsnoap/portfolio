@@ -21,11 +21,11 @@ export default Styled.section`
         height: 10em;
         margin-bottom: 5em;
     }
-    
+
     &.move-to-top {
         animation-name: move-up;
         animation-duration: .5s;
-        animation-delay: 10s;
+        animation-delay: 1s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
     }
