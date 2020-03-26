@@ -4,6 +4,7 @@ import React, {Component} from 'react'
 //scripts
 //style
 import Wrapper from './style'
+import Logo from '../../assets/icons/logo.js'
 
 class Loading extends Component {
   componentDidMount() {
@@ -12,8 +13,8 @@ class Loading extends Component {
   render() {
     return (
       <Wrapper className='loading-screen move-to-top'>
-        <h1>DS</h1>
-        <h2>Dustin Snoap</h2>
+        <Logo />
+        <h1>Dustin Snoap</h1>
       </Wrapper>
     )
   }

@@ -14,17 +14,18 @@ export default Styled.section`
         transform: translateY(0px);
 
     h1 {
-        font-size: 10em;
-        color: #ccc;
-    }
-    h2 {
         font-size: 5em;
         color: #ccc;
     }
+    svg {
+        height: 10em;
+        margin-bottom: 5em;
+    }
+    
     &.move-to-top {
         animation-name: move-up;
         animation-duration: .5s;
-        animation-delay: 1s;
+        animation-delay: 10s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
     }
