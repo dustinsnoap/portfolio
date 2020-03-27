@@ -5,7 +5,7 @@ import Home from '../components/home'
 // import Technologies from '../components/technologies'
 // import Projects from '../components/projects'
 // import Contact from '../components/contact'
-import Loading from '../components/loading'
+// import Loading from '../components/loading'
 //style
 import Wrapper from './style/portfolio'
 
@@ -16,7 +16,7 @@ class Portfolio extends Component {
   render() {
     return (
       <Wrapper className='portfolio'>
-        <Loading />
+        {/* <Loading /> */}
         <Home />
         {/* <Technologies />
         <Projects />

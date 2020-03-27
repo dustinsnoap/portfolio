@@ -12,8 +12,10 @@ class Home extends Component {
   render() {
     return (
       <Wrapper className='home'>
-        <h1>Home Component</h1>
-        <canvas className='particles'></canvas>
+        <div className='background'>
+          <figure className='moon'></figure>
+          <figure className='mountain'></figure>
+        </div>
       </Wrapper>
     )
   }
