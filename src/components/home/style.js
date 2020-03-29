@@ -18,11 +18,8 @@ export default Styled.section`
                         0 0 0 5.0em rgba(128,128,128,.1),
                         0 0 0 7.5em rgba(128,128,128,.1);
             content: '';
-            position: absolute;
-                height: 25em;
-                right: 0;
-                transform: translate(-20vw, 20vh);
-                width: 25em;
+            height: 25em;
+            width: 25em;
             &::after {
                 border-radius: 50%;
                 box-shadow: 13.5em 13.5em 0 3.5em #f0f0e3,
@@ -37,16 +34,9 @@ export default Styled.section`
         }
         // switch to svg line
         // 2nd line for highlight
-        .mountain {
+        .mountains {
             position: absolute;
             bottom: 0;
-            height: 75vmin;
-            width: 75vmin;
-            background: linear-gradient(to bottom, #0b0d12 5%, #1f2c31);
-            border-radius: 5vmin;
-            transform: translateY(70%) rotateZ(45deg);
-            box-shadow: 2px -2px 2px 0px #4797c5;
-            animation: mountain-breath 3s ease-in-out infinite alternate;
         }
     }
 
