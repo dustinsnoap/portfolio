@@ -18,8 +18,7 @@ export default Styled.section`
                         0 0 0 5.0em rgba(128,128,128,.1),
                         0 0 0 7.5em rgba(128,128,128,.1);
             content: '';
-            height: 25em;
-            width: 25em;
+            position: absolute;
             &::after {
                 border-radius: 50%;
                 box-shadow: 13.5em 13.5em 0 3.5em #f0f0e3,
@@ -37,6 +36,7 @@ export default Styled.section`
         .mountains {
             position: absolute;
             bottom: 0;
+            left: 0;
         }
     }
 
