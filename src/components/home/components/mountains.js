@@ -4,12 +4,14 @@ class Mountains extends Component {
     constructor(props) {
         super()
         this.state = {
-            amount: 22,
-            shadow: props.shadow,
             width: window.innerWidth,
-            height: window.innerHeight * .5,
-            mountains: [],
+            height: window.innerHeight,
+            amount: props.amount,
+            shadow: props.shadow,
+            color: props.color,
+            size: props.size,
             midpoint: props.midpoint,
+            mountains: [],
         }
         this.generate_mountains()
     }
@@ -17,8 +19,8 @@ class Mountains extends Component {
     generate_mountains = () => {
         for(let i=0; i<this.state.amount; i++) {
             let m = {}
-            m.y_start = this.state.height*.5
-            m.size = this.rand_int(m.y_start/2,m.y_start)
+            m.y_start = this.state.height
+            m.size = this.rand_int(this.state.height*this.state.size.min/100,this.state.height*this.state.size.max/100)
             m.x_mid = this.rand_int(-this.state.width/2,this.state.width)
             m.x_start = m.x_mid - m.size
             m.x_end = m.x_mid + m.size
@@ -33,17 +35,17 @@ class Mountains extends Component {
     render = () =>
         <svg className='mountains' width={this.state.width} height={this.state.height} version='1.1' xmlns='http://www.w3.org/2000/svg'>
             <linearGradient id='lgrad' x1='33%' y1='100%' x2='66%' y2='0%'>
-                <stop offset='0%' style={{stopColor: '#111', stopOpacity: 1}}></stop>
-                <stop offset='10%' style={{stopColor: '#111', stopOpacity: 1}}></stop>
-                <stop offset='100%' style={{stopColor: '#030', stopOpacity: 1}}></stop>
+                <stop offset='0%' style={{stopColor: this.state.color.dark, stopOpacity: 1}}></stop>
+                <stop offset='10%' style={{stopColor: this.state.color.dark, stopOpacity: 1}}></stop>
+                <stop offset='100%' style={{stopColor: this.state.color.light, stopOpacity: 1}}></stop>
             </linearGradient>
             {this.state.mountains.map((m, idx) => {
                 const path = m.path.split(' ')
                 const side = m.x_mid < this.state.midpoint ? 1 : -1
                 path[0] = `M${m.x_start+ (this.state.shadow.size * side)},${m.y_start} `
-                return <path key={idx} stroke='#111' fill={this.state.shadow.color} d={path}/>
+                return <path key={idx} stroke={this.state.color.dark} fill={this.state.shadow.color} d={path}/>
             })}
-            {this.state.mountains.map((m, idx) => <path key={idx} stroke='#111' fill='url(#lgrad)' d={m.path}/>)}
+            {this.state.mountains.map((m, idx) => <path key={idx} stroke={this.state.color.dark} fill='url(#lgrad)' d={m.path}/>)}
         </svg>
 }
 

@@ -38,6 +38,11 @@ export default Styled.section`
             bottom: 0;
             left: 0;
         }
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 
     @keyframes mountain-breath {
