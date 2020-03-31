@@ -18,7 +18,7 @@ class Home extends Component {
                 amount: 500,
                 color: '000408',
                 size: {min: .5, max: 2.5},
-                speed: {min: 10, max: 100},
+                speed: {min: 10, max: 100, x: .1, y: -.1},
                 brightness: {min: 50, max: 100}
             },
             mountains: {

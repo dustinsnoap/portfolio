@@ -4,6 +4,7 @@ export default Styled.section`
     height: 100vh;
     width: 100vw;
     background-color: #111;
+    background: linear-gradient(0deg, rgba(8,32,64,1) 0%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
 
     .background {
         height: 100vh;

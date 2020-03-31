@@ -78,6 +78,14 @@ class Stars extends Component {
     }
     update_stars = (stars) => {
         for(let i=0; i<stars.length; i++) {
+            stars[i].loc.x += this.state.speed.x
+            if(stars[i].loc.x < 0) stars[i].loc.x = this.state.width
+            else if(stars[i].loc.x > this.state.width) stars[i].loc.x = 0
+
+            stars[i].loc.y += this.state.speed.y
+            if(stars[i].loc.y < 0) stars[i].loc.y = this.state.height
+            else if(stars[i].loc.y > this.state.height) stars[i].loc.y = 0
+
             stars[i].brightness.cur += stars[i].step
             if(stars[i].brightness.cur > stars[i].brightness.max) stars[i].brightness.cur = stars[i].brightness.max
             else if(stars[i].brightness.cur < stars[i].brightness.min) stars[i].brightness.cur = stars[i].brightness.min
