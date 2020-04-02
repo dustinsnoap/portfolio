@@ -4,6 +4,7 @@ import React, {Component} from 'react'
 import Mountains from './components/mountains'
 import Moon from './components/moon'
 import Stars from './components/stars'
+import Title from './components/title'
 //scripts
 //style
 import Wrapper from './style'
@@ -14,6 +15,13 @@ class Home extends Component {
         this.state = {
             width: window.innerWidth,
             height: window.innerHeight,
+            title: {
+                title: 'dustin sno∆p',
+                subtitles: ['unexpected', 'distruptive', 'undefined', 'unlabled', 'not sure', 'developer', 'mad scientist'],
+                characters: '`¡™£¢∞§¶•ªº–≠å∂ƒ©˙˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/',
+                chance: .1,
+                fps: 10,
+            },
             stars: {
                 amount: 500,
                 color: '000408',
@@ -42,6 +50,7 @@ class Home extends Component {
                 <Moon {...this.state.moon} />
                 <Mountains {...this.state.mountains} />
             </div>
+            <Title {...this.state.title}/>
         </Wrapper>
         )
     }
