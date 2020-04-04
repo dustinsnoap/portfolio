@@ -39,13 +39,28 @@ class Mountains extends Component {
                 <stop offset='10%' style={{stopColor: this.state.color.dark, stopOpacity: 1}}></stop>
                 <stop offset='100%' style={{stopColor: this.state.color.light, stopOpacity: 1}}></stop>
             </linearGradient>
-            {this.state.mountains.map((m, idx) => {
+            <defs>
+                <pattern id='p1' x='0' y='0' height='7' width='7' patternUnits='userSpaceOnUse'>
+                    <path d='M0,6 l6,-6 1,0 0,1 -6,6 -1,0Z M6,7 l1,-1 0,1Z M0,1 l1,-1 -1,0Z' fill='#111' />
+                </pattern>
+            </defs>
+            {/* {this.state.mountains.map((m, idx) => {
                 const path = m.path.split(' ')
                 const side = m.x_mid < this.state.midpoint ? 1 : -1
                 path[0] = `M${m.x_start+ (this.state.shadow.size * side)},${m.y_start} `
                 return <path key={idx} stroke={this.state.color.dark} fill={this.state.shadow.color} d={path}/>
+            })} */}
+            {this.state.mountains.map((m, idx) => {
+                const s = m
+                const spath = s.path.split(' ')
+                const side = s.x_mid < this.state.midpoint ? 1 : -1
+                spath[0] = `M${s.x_start+ (this.state.shadow.size * side)},${s.y_start} `
+                return ([
+                    <path key={idx} stroke={this.state.color.dark} fill={this.state.shadow.color} d={spath}/>,
+                    <path key={idx} stroke={this.state.color.dark} fill='url(#lgrad)' d={m.path}/>,
+                    <path key={idx} stroke={this.state.color.dark} fill='url(#p1)' d={m.path}/>,
+                ])
             })}
-            {this.state.mountains.map((m, idx) => <path key={idx} stroke={this.state.color.dark} fill='url(#lgrad)' d={m.path}/>)}
         </svg>
 }
 

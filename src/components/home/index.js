@@ -17,7 +17,7 @@ class Home extends Component {
             height: window.innerHeight,
             title: {
                 title: 'dustin sno∆p',
-                subtitles: ['unexpected', 'distruptive', 'undefined', 'unlabled', 'not sure', 'developer', 'mad scientist'],
+                subtitles: ['unsure', 'developer', 'programmer', 'mad scientist','creator', 'responsive', 'text editor', 'experienced', 'original', 'professional', 'leader', 'backend engineer'],
                 characters: '`¡™£¢∞§¶•ªº–≠å∂ƒ©˙˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/',
                 chance: .1,
                 fps: 10,

@@ -19,6 +19,7 @@ class Title extends Component {
                 title_element.innerText = this.glitch(title_element.innerText, this.state.title)
             }, 1000/this.state.fps)
         }})
+        this.setState(() => {return {subtitle_idx: this.rand_int(0, this.state.subtitles.length-1)}})
         this.subtitle_test()
     }
     componentWillUnmount() {

@@ -35,6 +35,8 @@ export default Styled.section`
                         0 0 0 7.5em rgba(128,128,128,.1);
             content: '';
             position: absolute;
+            background-image: linear-gradient(-45deg,rgba(0,0,0,.09) 2px,transparent 2px,transparent 4px,rgba(0,0,0,.09) 4px,rgba(0,0,0,.09) 6px,transparent 6px,transparent);
+            background-size: 6px 6px;
             &::after {
                 border-radius: 50%;
                 box-shadow: 13.5em 13.5em 0 3.5em #f0f0e3,
@@ -44,7 +46,6 @@ export default Styled.section`
                 display: block;
                 height: 1px;
                 width: 1px;
-                
             }
         }
         .mountains {
@@ -60,12 +61,8 @@ export default Styled.section`
     }
 
     @keyframes mountain-breath {
-        0% {
-            box-shadow: 2px -2px 2px 0px #4797c5;
-        }
-        100% {
-            box-shadow: 2px -2px 4px 0px #4797c5;
-        }
+        0% {box-shadow: 2px -2px 2px 0px #4797c5}
+        100% {box-shadow: 2px -2px 4px 0px #4797c5}
     }
     @keyframes moon-breath {
         0% {
@@ -81,6 +78,4 @@ export default Styled.section`
                         0 0 0 8.25em rgba(128,128,128,.1);
         }
     }
-    
-    
 `
