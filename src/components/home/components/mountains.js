@@ -41,15 +41,10 @@ class Mountains extends Component {
             </linearGradient>
             <defs>
                 <pattern id='p1' x='0' y='0' height='7' width='7' patternUnits='userSpaceOnUse'>
+                    {/* <path d='M-1,8 l9,-9z' stroke='#111' fill='#111'/> */}
                     <path d='M0,6 l6,-6 1,0 0,1 -6,6 -1,0Z M6,7 l1,-1 0,1Z M0,1 l1,-1 -1,0Z' fill='#111' />
                 </pattern>
             </defs>
-            {/* {this.state.mountains.map((m, idx) => {
-                const path = m.path.split(' ')
-                const side = m.x_mid < this.state.midpoint ? 1 : -1
-                path[0] = `M${m.x_start+ (this.state.shadow.size * side)},${m.y_start} `
-                return <path key={idx} stroke={this.state.color.dark} fill={this.state.shadow.color} d={path}/>
-            })} */}
             {this.state.mountains.map((m, idx) => {
                 const s = m
                 const spath = s.path.split(' ')

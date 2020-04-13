@@ -26,6 +26,7 @@ export default Styled.section`
         width: 100vw;
         position: absolute;
         .moon {
+            cursor: grab;
             animation: moon-breath 3s ease-in-out infinite alternate;
             background-color: #fff;
             border-radius: 50%;
