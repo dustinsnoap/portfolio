@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 //components
 import Home from '../components/home'
-// import Technologies from '../components/technologies'
+import Technologies from '../components/technologies'
 // import Projects from '../components/projects'
 // import Contact from '../components/contact'
 import Loading from '../components/loading'
@@ -18,9 +18,9 @@ class Portfolio extends Component {
       <Wrapper className='portfolio'>
         <Loading />
         <Home />
-        {/* <Technologies />
-        <Projects />
-        <Contact /> */}
+        <Technologies />
+        {/* <Projects /> */}
+        {/* <Contact /> */}
       </Wrapper>
     )
   }
