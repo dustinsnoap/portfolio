@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 //views
+import Intro from './views/intro'
 //style
 import GlobalStyle from './style/global'
 //init
@@ -10,7 +11,7 @@ import GlobalStyle from './style/global'
 ReactDOM.render(
     <div>
         <GlobalStyle/>
-        <h1>Portfolio: Minimalist</h1>
+        <Intro />
     </div>,
     root
 )
