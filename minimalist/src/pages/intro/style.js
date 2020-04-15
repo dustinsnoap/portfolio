@@ -11,13 +11,13 @@ export default Styled.article`
     header {
         color: #252525;
         position: absolute;
-        width: 66vw;
+        width: 67vw;
         svg {
             font-size: 40px;
             fill: rgba(0,0,0,0);
             width: 100%;
             text {
-                fill: #666;
+                fill: #444;
                 stroke-width: .2px;
                 font-family: 'inconsolata';
                 font-weight: 1000;
@@ -25,14 +25,18 @@ export default Styled.article`
         }
     }
     subtitle {
-        font-size: 5vmin;
         line-height: 7.5vmin;
         color: #fff;
+        font-size: 4vmin;
         font-family: monsterrat;
+        font-weight: 1000;
         position: absolute;
         bottom: 0;
         left: 0;
         transform: translate(10vw, -17vh);
+        p:first-of-type {
+            font-size: 5vmin;
+        }
         #underline {
             fill: #08f;
             width: 30vmin;

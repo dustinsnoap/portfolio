@@ -3,7 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 //views
-import Intro from './views/intro'
+import HUD from './views/hud'
+import Book from './views/book'
 //style
 import GlobalStyle from './style/global'
 //init
@@ -11,7 +12,8 @@ import GlobalStyle from './style/global'
 ReactDOM.render(
     <div>
         <GlobalStyle/>
-        <Intro />
+        <HUD />
+        <Book />
     </div>,
     root
 )
