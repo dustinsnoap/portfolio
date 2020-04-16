@@ -24,7 +24,7 @@ export default Styled.article`
             }
         }
     }
-    subtitle {
+    .subtitle {
         line-height: 7.5vmin;
         color: #fff;
         font-size: 4vmin;

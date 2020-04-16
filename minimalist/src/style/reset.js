@@ -18,6 +18,7 @@ export default `
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;
+        box-sizing: border-box;
     }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
@@ -26,6 +27,7 @@ export default `
     }
     body {
         line-height: 1;
+        font-size: 1vmin;
     }
     ol, ul {
         list-style: none;
