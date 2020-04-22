@@ -10,7 +10,7 @@ import GlobalStyle from './style/global'
 //init
 
 ReactDOM.render(
-    <div>
+    <div className='portfolio'>
         <GlobalStyle/>
         <HUD />
         <Book />

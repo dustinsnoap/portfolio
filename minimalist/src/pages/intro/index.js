@@ -8,7 +8,7 @@ import Wrapper from './style'
 
 class Intro extends Component {
     render = () =>
-        <Wrapper>
+        <Wrapper className='intro'>
             <header>
                 <svg viewBox="0 0 100 40">
                     <defs>

@@ -9,6 +9,7 @@ import Wrapper from './style'
 class HUD extends Component {
     add_class = e => {
         e.currentTarget.classList.toggle('active')
+        
     }
     render = () =>
         <Wrapper className='hud'>

@@ -18,6 +18,7 @@ export default Styled.article`
             width: 100%;
             text {
                 fill: #444;
+                // stroke: #444;
                 stroke-width: .2px;
                 font-family: 'inconsolata';
                 font-weight: 1000;
