@@ -3,7 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 //views
-import HUD from './views/hud'
+import Header from './views/header'
+import Footer from './views/footer'
 import Book from './views/book'
 //style
 import GlobalStyle from './style/global'
@@ -12,8 +13,9 @@ import GlobalStyle from './style/global'
 ReactDOM.render(
     <div className='portfolio'>
         <GlobalStyle/>
-        <HUD />
         <Book />
+        <Header />
+        <Footer />
     </div>,
     root
 )

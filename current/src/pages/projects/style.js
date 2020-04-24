@@ -1,7 +1,7 @@
 import Styled from 'styled-components'
 
 export default Styled.main`
-    background-color: #111;
+    // background-color: #111;
     height: 100vh;
     overflow: hidden;
     width: 100vw;

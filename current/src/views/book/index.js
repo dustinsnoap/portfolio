@@ -27,7 +27,8 @@ class Book extends Component {
     render = () =>
         <Wrapper className='book'
             onClick={() => this.click()}
-            style={{transform: `translateX(-${this.state.page*100}vw)`}}
+            // style={{transform: `translateX(-${this.state.page*100}vw)`}}
+            style={{transform: `translateX(-100vw)`}}
             >
             <Intro />
             <Projects />

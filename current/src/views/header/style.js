@@ -1,13 +1,13 @@
 import Styled from 'styled-components'
 
-export default Styled.div`
+export default Styled.header`
     position: fixed;
+    height: 10vh;
     width: 100vw;
-    z-index: 10000;
-    padding: 2.5em 2.5em 0 2.5em;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    padding: 0 2vw;
     svg {
         height: 3.75em;
         cursor: pointer;
@@ -37,8 +37,6 @@ export default Styled.div`
             &:nth-of-type(1) {transform: translateX(-1.75em)}
             &:nth-of-type(2) {transform: translate(0, 1.75em)}
             &:nth-of-type(3) {transform: translate(-1.75em, 3.5em)}
-
         }
-
     }
 `

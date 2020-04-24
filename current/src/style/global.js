@@ -7,6 +7,7 @@ export default createGlobalStyle`
     ${fonts}
     body {
         overflow: hidden;
+        background-color: #111;
         // display: flex;
         // justify-content: flex-start;
         // height: 100vh;
