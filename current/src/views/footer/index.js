@@ -3,30 +3,27 @@ import React, {Component} from 'react'
 import Wrapper from './style'
 
 class Footer extends Component {
-    constructor(props) {
-        super()
-        this.state = {
-            current_page: 'projects',
-            pages: ['intro','projects','about','contact']
-        }
+    dec = () => {
+        if(this.props.current_page-1 < 0) this.props.change_page(this.props.pages.length-1)
+        else this.props.change_page(this.props.current_page-1)
     }
-    update_page = name => {
-        this.setState(() => ({
-            current_page: name
-        }))
+    inc = () => {
+        if(this.props.current_page === this.props.pages.length-1) this.props.change_page(0)
+        else this.props.change_page(this.props.current_page+1)
     }
     render = () =>
-        <Wrapper className='footer'>
+        <Wrapper>
             <nav className='page-slider'>
-                {this.state.pages.map((name, idx) =>
+                <div className='back' onClick={() => this.dec()}></div>
+                {this.props.pages.map((name, idx) =>
                     <React.Fragment key={idx}>
-                        <div className={`page${this.state.current_page===name ? ' active' : ''}`} onClick={() => this.update_page(name)}>
-                            
+                        <div className={`page${this.props.current_page===idx ? ' active' : ''}`} onClick={() => this.props.change_page(idx)}>
                             <span></span>
                         </div>
-                        {idx < this.state.pages.length-1 ?  <div className='divider'></div> : null}
+                        {idx < this.props.pages.length-1 ?  <div className='divider'></div> : null}
                     </React.Fragment>
                 )}
+                <div className='forward' onClick={() => this.inc()}></div>
             </nav>
         </Wrapper>
 }

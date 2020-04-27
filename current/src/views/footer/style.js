@@ -8,6 +8,12 @@ export default Styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
+    .back, .forward {
+        display: block;
+        background-color: green;
+        height: 100px;
+        width: 100px;
+    }
     .page-slider {
         width: 33%;
         height: 3vh;
