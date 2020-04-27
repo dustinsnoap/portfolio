@@ -21,7 +21,13 @@ export default Styled.footer`
             height: 3vh;
             width: 3vh;
             cursor: pointer;
-            &.active > span {background-color: #fff}
+            &.active {
+                span {
+                    border-color: #08f;
+                    background-color: #08f;
+                }
+                &:hover > span {background-color: #08f}
+            }
             &:hover > span {background-color: #ccc}
             span {
                 display: block;
@@ -29,7 +35,7 @@ export default Styled.footer`
                 width: 1.5vh;
                 border: .11vh solid #ccc;
                 border-radius: 50%;
-                transition: background-color .42s ease-in-out;
+                transition: all .666s ease-in-out;
             }
         }
         .divider {
