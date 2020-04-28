@@ -13,18 +13,19 @@ class Footer extends Component {
     }
     render = () =>
         <Wrapper>
+            <div className='back' onClick={() => this.dec()}><span></span></div>
             <nav className='page-slider'>
-                <div className='back' onClick={() => this.dec()}></div>
                 {this.props.pages.map((name, idx) =>
                     <React.Fragment key={idx}>
                         <div className={`page${this.props.current_page===idx ? ' active' : ''}`} onClick={() => this.props.change_page(idx)}>
-                            <span></span>
+                            <span className='bubble'></span>
+                            <span className='tooltip'>{name}</span>
                         </div>
                         {idx < this.props.pages.length-1 ?  <div className='divider'></div> : null}
                     </React.Fragment>
                 )}
-                <div className='forward' onClick={() => this.inc()}></div>
             </nav>
+            <div className='forward' onClick={() => this.inc()}><span></span></div>
         </Wrapper>
 }
 
