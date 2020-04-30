@@ -28,7 +28,7 @@ class Projects extends Component {
         })
     }
     render = () =>
-        <Wrapper className='projects'>
+        <Wrapper className='projects' style={{transform: `translateX(${this.props.translate}vw)`}}>
             <aside className='controller'>
                 <figure className='inc' onClick={() => this.test(1)}></figure>
                 <figure className='dec' onClick={() => this.test(-1)}></figure>

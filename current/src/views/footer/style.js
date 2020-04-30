@@ -1,7 +1,6 @@
 import Styled from 'styled-components'
 
 export default Styled.footer`
-    position: fixed;
     height: 10vh;
     width: 100vw;
     bottom: 0;
@@ -71,7 +70,6 @@ export default Styled.footer`
         }
         .divider {
             height: 0;
-            // background-color: #666;
             border-top: .22vh dashed #333;
             width: calc(100% / 3 - 3vh)
         }

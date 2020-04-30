@@ -1,7 +1,6 @@
 import Styled from 'styled-components'
 
 export default Styled.header`
-    position: fixed;
     height: 10vh;
     width: 100vw;
     display: flex;

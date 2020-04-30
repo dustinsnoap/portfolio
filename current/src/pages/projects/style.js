@@ -1,10 +1,13 @@
 import Styled from 'styled-components'
 
 export default Styled.main`
-    // background-color: #111;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    width: 100vw;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    transition: transform 2s ease-in-out;
     .controller {
         display: flex;
         flex-direction: column;
@@ -41,13 +44,6 @@ export default Styled.main`
                     transform: translateY(5vh) rotate(225deg)
                 }}
         }
-    }
-    .project-wrapper {
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     .project {
         color: #ccc;

@@ -1,13 +1,13 @@
 import Styled from 'styled-components'
 
-export default Styled.article`
-    background-color: #111;
-    height: 100vh;
-    width: 100vw;
+export default Styled.main`
+    position: absolute;
     display: flex;
     align-items: center;
+    height: 100%;
+    width: 100%;
     justify-content: center;
-
+    transition: transform 2s ease-in-out;
     header {
         color: #252525;
         position: absolute;
