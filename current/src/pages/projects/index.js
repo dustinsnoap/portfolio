@@ -28,14 +28,24 @@ class Projects extends Component {
         })
     }
     render = () =>
-        <Wrapper className='projects' style={{transform: `translateX(${this.props.translate}vw)`}}>
-            <aside className='controller'>
+        <Wrapper className={this.props.classes}>
+            <article className='project'>
+                <h1 className='name'>Legends of Alabastra</h1>
+                <img className='preview' src={this.state.projects[0].img} alt='preview'/>
+                <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rhoncus dolor augue, quis tincidunt erat convallis rutrum. Pellentesque semper vehicula felis et tempor. Maecenas sodales convallis ipsum, ut scelerisque ipsum rutrum lacinia. Pellentesque dui nisl, imperdiet at feugiat eget, lobortis vel turpis. Cras tincidunt libero vel pulvinar pharetra. Suspendisse pellentesque erat eu eros egestas finibus. Etiam blandit quam sit amet est porta, eu laoreet arcu elementum. Ut id nulla nec nunc aliquam auctor. Vivamus ac lorem consectetur, blandit dui condimentum, sollicitudin nulla. Proin semper eros suscipit, tempus mi a, cursus dui. Cras turpis libero, dictum non bibendum eget, ultricies et.</p>
+                <aside className='tech-stack'>
+                    {this.state.projects[0].tech.map(tech => <p key={tech}>{tech}</p>)}
+                </aside>
+            </article>
+            <div className='controller'>
+                <figure className='prev' onClick={() => this.test(1)}></figure>
+                <figure className='next' onClick={() => this.test(1)}></figure>
+            </div>
+            {/* {this.state.projects.map(project => <Project key={project.name} {...project}/>)} */}
+            {/* <aside className='controller'>
                 <figure className='inc' onClick={() => this.test(1)}></figure>
                 <figure className='dec' onClick={() => this.test(-1)}></figure>
-            </aside>
-            {this.state.projects.map(project => 
-                <Project key={project.name} {...project}/>
-            )}
+            </aside> */}
         </Wrapper>
 }
 

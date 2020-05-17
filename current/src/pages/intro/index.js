@@ -8,7 +8,7 @@ import Wrapper from './style'
 
 class Intro extends Component {
     render = () =>
-        <Wrapper className='intro' style={{transform: `translateX(${this.props.translate}vw)`}}>
+        <Wrapper className={this.props.classes}>
             <header>
                 <svg viewBox="0 0 100 40">
                     <defs>

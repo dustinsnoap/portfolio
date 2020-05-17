@@ -12,7 +12,7 @@ class Portfolio extends Component {
         super()
         this.state = {
             current_page: 1,
-            pages: ['intro','projects','about','contact']
+            pages: ['intro','projects','skills','contact']
         }
     }
     change_page = page_num => {
