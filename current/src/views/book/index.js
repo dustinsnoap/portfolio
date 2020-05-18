@@ -9,15 +9,6 @@ import Contact from '../../pages/contact'
 //style
 import Wrapper from './style'
 
-// const get_page_classes = (this_page, current_page, pages) => {
-//     const previous_page = current_page === 0 ? pages.length-1 : current_page-1
-//     const next_page = current_page===pages.length-1 ? 0 : current_page+1
-//     if(this_page === pages[current_page]) return `${this_page} current`
-//     if(this_page === pages[previous_page]) return `${this_page} previous`
-//     if(this_page === pages[next_page]) return `${this_page} next`
-//     return this_page
-// }
-
 //this_page: the name of the current page
 //current_page: index of current page in pages
 //pages: list of all pages

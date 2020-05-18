@@ -1,21 +1,20 @@
 import React from 'react'
 
-const Project = project => {
-    return <article className='project'>
-        <h2 className='name'>{project.name}</h2>
-        <section className='description'>
-            <p>{project.description}</p>
-        </section>
-        <img className='preview' src={project.img} alt='preview'/>
-        <section className='tech-stack'>
-            {project.tech.map(tech =>
-                <p className='tech' key={tech}>{tech}</p>
-            )}
-        </section>
-        <section className='description'>
-            <p>{project.description}</p>
-        </section>
-    </article>
+const get_class = position => {
+    if(position.current === position.idx) return ' current'
+    if(position.current === 0 && position.idx === position.total-1) return ' prev'
+    if(position.idx === position.current-1) return ' prev'
+    if(position.current === position.total-1 && position.idx === 0) return ' next'
+    if(position.idx === position.current+1) return ' next'
+    return ''
 }
+
+const Project = project =>
+    <article className={`project${get_class(project.position)}`}>
+        <h1 className='name'>{project.name}</h1>
+        <img className='preview' src={project.img} alt='preview'/>
+        <p className='description'>{project.description}</p>
+        <aside className='tech-stack'>{project.tech.map(tech => <p key={tech}>{tech}</p>)}</aside>
+    </article>
 
 export default Project

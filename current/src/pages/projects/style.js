@@ -1,13 +1,15 @@
 import Styled from 'styled-components'
 
 export default Styled.main`
-    // background-color: green;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
     align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    opacity: 0;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    width: 100%;
+    &.current {opacity: 100}
     &.left {transform: translateX(-100vw)}
     &.right {transform: translateX(100vw)}
     .project {
