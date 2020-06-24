@@ -1,10 +1,10 @@
 //imports
 import React, {Component} from 'react'
 //components
-import Project from './project'
+// import Project from './project'
 //assets
 //style
-import Wrapper from './style'
+import Wrapper from './style.js'
 
 class Projects extends Component {
     constructor(props) {
@@ -12,28 +12,85 @@ class Projects extends Component {
         this.state = {
             project_num: 0,
             mouse_pos: {x: 0, y: 0},
+            current: 0,
             projects: [
-                {name: 'Legends of Alabastra', img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Django', 'Pusher', 'PostgrSQL', 'React', 'Redux', 'Canvas'], description: 'Sea of Thieves is a 2018 action-adventure game developed by Rare and published by Microsoft Studios. The player assumes the role of a pirate who completes voyages from different trading companies in order to become the ultimate pirate legend. Sea of Thieves is a first-person multiplayer game in which players cooperate with each other to explore an open world via a pirate ship. The game is described as a "shared world adventure game", which means groups of players will encounter each other regularly during their adventures.'},
-                // {name: 'Workout Tracker', img: '', link: '', tech: ['React', 'Redux', 'PostgreSQL', 'PWA', 'Auth0'], description: 'flkf sd sdf sdf sd fsd fsd f sdf sdf sdf sd ds.'}
+                {name: 'Legends of Alabastra', year: 2020, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Django', 'Pusher', 'PostgrSQL', 'React', 'Redux', 'Canvas']},
+                {name: 'Workout Tracker', year: 2019, img: './img/legends_of_alabastra.png', link: '', tech: ['React', 'Redux', 'PostgreSQL', 'PWA', 'Auth0']},
+                {name: 'Radland', year: 2020, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
+                {name: 'MyDish', year: 2019, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
+                {name: 'Thursday', year: 2019, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
             ]
         }
     }
-    componentDidUpdate
-    change_project = num => {
-        this.setState(prev => {
-            let project_num = prev.project_num + num
-            if(project_num === prev.projects.length) project_num = 0
-            if(project_num < 0) project_num = prev.projects.length - 1
-            return {project_num: project_num}
+    componentDidMount() {
+        this.draw_preview_cover()
+    }
+    rand_between = (min, max) => Math.floor(Math.random() * max) + min
+    draw_preview_cover = () => {
+        // const parent = document.querySelector('.projects .preview')
+        const canvas = document.querySelector('.projects .preview .cover')
+        const ctx = canvas.getContext('2d')
+        canvas.width = canvas.offsetWidth
+        canvas.height = canvas.offsetHeight
+
+        const height = canvas.height
+        const num_of_panels = 5
+        const heights = []
+        for(let i=0; i<num_of_panels; i++) heights.push(this.rand_between(5,25))
+        const width = canvas.width/heights.length
+        ctx.fillStyle = '#111'
+        heights.forEach((h,i) => {
+            ctx.fillRect(width*i,0,width,height/h)
+            ctx.fillRect(width*(i+1)-width/50,0,width/25,height)
+            ctx.fillRect(width*i,height,width,-height/h)
         })
     }
+    change_project = num => this.setState({project_num: num})
     render = () =>
         <Wrapper className={this.props.classes}>
-            {this.state.projects.map((project,idx) => <Project key={project.name} {...project} position={{idx: idx, current: this.state.project_num, total: this.state.projects.length}}/>)}
-            <div className='controller'>
-                <figure className='prev' onClick={() => this.change_project(-1)}></figure>
-                <figure className='next' onClick={() => this.change_project(1)}></figure>
+            <div className='container'>
+                <div className='indicator'>
+                {this.state.projects.map((_,idx) => 
+                    <span key={idx}
+                        className={this.state.project_num === idx ? 'current' : null}
+                        onClick={() => this.change_project(idx)}>0{idx+1}
+                    </span>
+                )}
+                </div>
+                <div className='meta-container'>
+                    <div className='name-container'>
+                        <div className='name' style={{transform: `translatey(-${100*this.state.project_num}%)`}}>
+                        {this.state.projects.map((project, idx) =>
+                            <h1 key={idx}>{project.name}</h1>
+                        )}
+                        </div>
+                    </div>
+                    <div className='year-link'>
+                        <div className='year'>
+                            {/* <span className='title'>year:</span> */}
+                            <span>{this.state.projects[this.state.project_num].year}</span>
+                        </div>
+                        <div className='link'>
+                            <a href={this.state.projects[this.state.project_num].link}>Visit</a>
+                        </div>
+                    </div>
+                    <div className='tech-stack'>
+                    {this.state.projects[this.state.project_num].tech.map((tech, idx) =>
+                        <span key={idx}>{tech}</span>
+                    )}
+                    </div>
+                </div>
+                <div className='preview'>
+                    <div className='image-container' style={{transform: `translatey(-${100*this.state.project_num}%)`}}>
+                    {this.state.projects.map((project, idx) =>
+                        <img key={idx} src={project.img} alt={project.name}/>)
+                    }
+                    {/* <div className='image-cover'></div> */}
+                    </div>
+                    <canvas className='cover'></canvas>
+                </div>
             </div>
+            
         </Wrapper>
 }
 

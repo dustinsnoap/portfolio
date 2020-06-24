@@ -14,11 +14,11 @@ class Header extends Component {
     render = () =>
         <Wrapper className='header'>
             <Logo className='logo'/>
-            <figure className='menu-btn' onClick={e => this.add_class(e)}>
+            {/* <figure className='menu-btn' onClick={e => this.add_class(e)}>
                 <span></span>
                 <span></span>
                 <span></span>
-            </figure>
+            </figure> */}
         </Wrapper>
 }
 

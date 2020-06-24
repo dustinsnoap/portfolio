@@ -2,7 +2,7 @@
 import React, {Component} from 'react'
 //pages
 import Intro from '../../pages/intro'
-import Skills from '../../pages/skills'
+import Aboutme from '../../pages/aboutme'
 import Projects from '../../pages/projects'
 import Contact from '../../pages/contact'
 //assets
@@ -27,8 +27,8 @@ class Book extends Component {
         this.state = {
             pages: {
                 intro: Intro,
+                about: Aboutme,
                 projects: Projects,
-                about: Intro,
                 contact: Projects,
             }
         }
@@ -39,8 +39,8 @@ class Book extends Component {
     render = () => 
         <Wrapper className='book'>
             <Intro classes={get_page_classes('intro', this.props.current_page, this.props.pages)}/>
+            <Aboutme classes={get_page_classes('aboutme', this.props.current_page, this.props.pages)}/>
             <Projects classes={get_page_classes('projects', this.props.current_page, this.props.pages)}/>
-            <Skills classes={get_page_classes('skills', this.props.current_page, this.props.pages)}/>
             <Contact classes={get_page_classes('contact', this.props.current_page, this.props.pages)}/>
         </Wrapper>
 }

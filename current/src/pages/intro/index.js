@@ -22,10 +22,12 @@ class Intro extends Component {
                 </svg>
             </header>
             <div className='subtitle'>
-                <p>I'm Dustin,</p>
+                <p>Is it me you're looking for?</p>
                 <Underline/>
-                <p>Back-End Architect</p>
-                <p>Front-End Developer</p>
+                <div className='tags'>
+                    <p>Back-End Architect</p>
+                    <p>Front-End Developer</p>
+                </div>
             </div>
         </Wrapper>
 }
