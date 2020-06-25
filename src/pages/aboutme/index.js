@@ -2,6 +2,9 @@
 import React, {Component} from 'react'
 //components
 //assets
+import Github from '../../assets/github'
+import LinkedIn from '../../assets/linkedin'
+import Email from '../../assets/email'
 //style
 import Wrapper from './style'
 
@@ -79,58 +82,69 @@ class Skills extends Component {
         ctx.restore()
     }
     draw_objects = () => {
-        this.draw_object({x: 20, y: 100}, 3, '#08F', 0, 'JS', 'square')
-        this.draw_object({x: 21, y: 97}, 2, '#222', 0, 'x')
-        this.draw_object({x: 23, y: 100}, 2.5, '#222', 0, '', 'circle')
-        this.draw_object({x: 26, y: 100}, 2, '#222', 0, '', 'circle')
-        this.draw_object({x: 27, y: 98.5}, 3.5, '#222', 30, 'x', 'square')
-        this.draw_object({x: 30, y: 100}, 2, '#222', 0, 'x', 'square')
-        this.draw_object({x: 31.25, y: 98}, 3, '#08F', 20, 'C++', 'square')
-        this.draw_object({x: 34.75, y: 97}, 3.5, '#222', 0, 'x', 'square')
-        this.draw_object({x: 36, y: 100}, 3, '#08F', 0, 'Python', 'square')
-        this.draw_object({x: 38.25, y: 96.5}, 2.5, '#222', 0, '', 'circle')
-        this.draw_object({x: 38.25, y: 94}, 1.5, '#222', 0, '', 'circle')
-        this.draw_object({x: 39.25, y: 100}, 3.5, '#222', 0, 'x', 'square')
-        this.draw_object({x: 40, y: 94.25}, 1.25, '#222', 0, '', 'circle')
-        this.draw_object({x: 41, y: 96.5}, 3.5, '#222', 15, 'x', 'square')
-        this.draw_object({x: 44, y: 100}, 3, '#08F', 0, 'css', 'square')
-        this.draw_object({x: 44.5, y: 97}, 2.5, '#222', 0, 'x', 'square')
-        this.draw_object({x: 47.75, y: 97.5}, 3, '#08F', 0, 'react', 'square')
-        this.draw_object({x: 48, y: 100}, 2.5, '#222', 0, 'x', 'square')
-        this.draw_object({x: 50.75, y: 97}, 2, '#222', 0, '', 'circle')
-        this.draw_object({x: 52, y: 100}, 3, '#08F', 0, 'php', 'square')
-        this.draw_object({x: 53, y: 97}, 3, '#08F', 0, 'go', 'square')
-        this.draw_object({x: 55.25, y: 100}, 3, '#08F', 0, 'mysql', 'square')
-        this.draw_object({x: 57.5, y: 97.25}, 3, '#08F', 20, 'postgres', 'square')
-        this.draw_object({x: 58.75, y: 100}, 2.25, '#222', 0, 'x', 'square')
-        this.draw_object({x: 61.25, y: 100}, 1.5, '#222', 0, '', 'circle')
-        this.draw_object({x: 63.5, y: 100}, 2.25, '#222', 0, '', 'circle')
-        this.draw_object({x: 66, y: 100}, 3, '#08F', 0, 'less', 'square')
-        this.draw_object({x: 69.25, y: 100}, 1.75, '#222', 0, '', 'circle')
-        this.draw_object({x: 71.25, y: 100}, 1.5, '#222', 0, 'x', 'square')
-        this.draw_object({x: 71.5, y: 98.5}, 3, '#08F', 10, 'html', 'square')
-        this.draw_object({x: 73, y: 100}, 1.25, '#222', 0, '', 'circle')
-        this.draw_object({x: 74.75, y: 100}, 3, '#08F', 0, 'node', 'square')
-        this.draw_object({x: 76, y: 97}, 1.5, '#222', 0, '', 'circle')
-        this.draw_object({x: 78, y: 100}, 2, '#222', 0, '', 'circle')
+        this.draw_object({x: 10, y: 100}, 9, '#08F', 0, 'JavaScript', 'square')
+        this.draw_object({x: 14.5, y: 91}, 2.5, '#222', 0, '', 'circle')
+        this.draw_object({x: 17, y: 91}, 3, '#222', 0, 'x')
+        this.draw_object({x: 19, y: 100}, 5, '#222', 0, '', 'circle')
+        this.draw_object({x: 24, y: 100}, 3, '#222', 0, '', 'circle')
+        this.draw_object({x: 24.5, y: 97.25}, 5, '#222', 20, 'x', 'square')
+        this.draw_object({x: 29, y: 100}, 3, '#222', 0, 'x', 'square')
+        this.draw_object({x: 30, y: 97}, 5, '#08F', 15, 'Python', 'square')
+        this.draw_object({x: 33, y: 100}, 2.5, '#222', 0, 'x', 'square')
+        this.draw_object({x: 35.25, y: 97}, 3, '#222', 0, 'x', 'square')
+        this.draw_object({x: 36, y: 94}, 2, '#222', 0, '', 'circle')
+        this.draw_object({x: 36.5, y: 100}, 3, '#08F', 0, 'C++', 'square')
+        this.draw_object({x: 39.75, y: 100}, 3.5, '#222', 0, 'x', 'square')
+        this.draw_object({x: 38.25, y: 96.5}, 2, '#222', 0, '', 'circle')
+        this.draw_object({x: 38.75, y: 94.75}, 3.5, '#222', 0, '', 'circle')
+        this.draw_object({x: 42, y: 96.5}, 2.75, '#222', 10, 'x', 'square')
+        this.draw_object({x: 44.75, y: 100}, 3, '#08F', 0, 'php', 'square')
+        this.draw_object({x: 45, y: 97}, 2.5, '#222', 0, 'x', 'square')
+        this.draw_object({x: 49, y: 100}, 2.5, '#222', 0, 'x', 'square')
+        this.draw_object({x: 48, y: 97.5}, 4, '#08F', 0, 'node', 'square')
+        this.draw_object({x: 54, y: 100}, 5, '#08F', 0, 'react', 'square')
+        this.draw_object({x: 59.5, y: 100}, 4, '#08F', 0, 'html', 'square')
+        this.draw_object({x: 55, y: 95}, 4, '#222', 0, 'x', 'square')
+        this.draw_object({x: 52, y: 95}, 3, '#222', 0 , '', 'circle')
+        this.draw_object({x: 64, y: 100}, 3, '#222', 0, 'x', 'square')
+        this.draw_object({x: 63.5, y: 96.5}, 3, '#08F', 25, 'css', 'square')
+        this.draw_object({x: 68, y: 98.5}, 7, '#08F', -30, 'postgres', 'square')
+        this.draw_object({x: 74, y: 100}, 3, '#222', 0, '', 'circle')
+        this.draw_object({x: 85, y: 100}, 5, '#08F', 0, 'mysql', 'square')
+        this.draw_object({x: 77, y: 100}, 2, '#08F', 0, 'go', 'square')
+        this.draw_object({x: 79.5, y: 100}, 3, '#222', 0, 'x', 'square')
+        this.draw_object({x: 77.5, y: 97.5}, 2, '#222', -30, 'x', 'square')
+        this.draw_object({x: 75.5, y: 96}, 3, '#222', 0, '', 'circle')
+        this.draw_object({x: 74.5, y: 93.5}, 2, '#222', 0, '', 'circle')
+        this.draw_object({x: 80.75, y: 96.5}, 4, '#08F', 130, 'less', 'square')
+        this.draw_object({x: 85.25, y: 94.5}, 3, '#222', 30, 'x', 'square')
+        
+        // this.draw_object({x: 76, y: 97}, 1.5, '#222', 0, '', 'circle')
+        // this.draw_object({x: 78, y: 100}, 2, '#222', 0, '', 'circle')
         
     }
     render = () =>
         <Wrapper className={this.props.classes}>
-            <div className='words'>
-                <h1>Greetings!</h1>
+            <div className='container'>
+                <div className='greeting'>
+                    <h1>Greetings!</h1>
+                    <div className='social'>
+                        <Github />
+                        <LinkedIn />
+                        <Email />
+                    </div>
+                </div>
                 <div className='life-story'>
-                    <p>My name is not Gannon Darcy.</p>
+                    <p>My name is not <span className='highlight'>Gannon Darcy.</span></p>
                     <p>Full Stack Engineer with experience bridging the gap to help technical and non-technical teams communicate, plan, and organize in order to work exceptionally well together.</p>
                     <p>Passionate about Cyber Security.</p>
                     <p>Proven leadership in training others how to program through work as a Teaching Assistant and Team Lead.</p>
                     <p>Main languages are JavaScript and Python and there frameworks in React and Django.</p>
                     <p>Comfortable working on diverse teams in fast-paced and ambiguous environments, while being able to function autonomously.</p>
                     <p>A proactive self-starter with a passion for learning and growth.</p>
-
                 </div>
+                <canvas className='skills'></canvas>
             </div>
-            <canvas className='skills'></canvas>
         </Wrapper>
 }
 
