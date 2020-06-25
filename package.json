@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,10 +15,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "engines" : {
-      "node" : "=8.10.0"
+  "engines": {
+    "node": "=8.10.0"
   },
-
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "repository": {
