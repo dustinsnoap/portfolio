@@ -25,24 +25,21 @@ class Projects extends Component {
     componentDidMount() {
         this.draw_preview_cover()
     }
-    rand_between = (min, max) => Math.floor(Math.random() * max) + min
+    rand_between = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
     draw_preview_cover = () => {
         // const parent = document.querySelector('.projects .preview')
         const canvas = document.querySelector('.projects .preview .cover')
         const ctx = canvas.getContext('2d')
         canvas.width = canvas.offsetWidth
         canvas.height = canvas.offsetHeight
-
-        const height = canvas.height
         const num_of_panels = 5
         const heights = []
-        for(let i=0; i<num_of_panels; i++) heights.push(this.rand_between(5,25))
+        for(let i=0; i<num_of_panels; i++) heights.push(this.rand_between(90,100)/100)
         const width = canvas.width/heights.length
         ctx.fillStyle = '#111'
+        ctx.fillRect(0,0,canvas.width,canvas.height)
         heights.forEach((h,i) => {
-            ctx.fillRect(width*i,0,width,height/h)
-            ctx.fillRect(width*(i+1)-width/50,0,width/25,height)
-            ctx.fillRect(width*i,height,width,-height/h)
+            ctx.clearRect(i*width,(canvas.height-(h*canvas.height))/2,width,h*canvas.height)
         })
     }
     change_project = num => this.setState({project_num: num})
