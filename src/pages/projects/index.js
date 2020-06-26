@@ -14,11 +14,11 @@ class Projects extends Component {
             mouse_pos: {x: 0, y: 0},
             current: 0,
             projects: [
-                {name: 'Legends of Alabastra', year: 2020, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Django', 'Pusher', 'PostgrSQL', 'React', 'Redux', 'Canvas']},
-                {name: 'Workout Tracker', year: 2019, img: './img/legends_of_alabastra.png', link: '', tech: ['React', 'Redux', 'PostgreSQL', 'PWA', 'Auth0']},
+                {name: 'Legends of Alabastra', year: 2020, img: './img/legends_of_alabastra.png', link: 'https://hungry-spence-d1d30a.netlify.app/', tech: ['Python', 'Django', 'Pusher', 'PostgrSQL', 'React', 'Redux', 'Canvas']},
+                {name: 'LiftQuest', year: 2019, img: './img/liftquest.png', link: 'https://www.liftquestapp.com/', tech: ['React', 'Redux', 'NodeJS', 'PostgreSQL', 'PWA', 'Auth0']},
                 {name: 'Radland', year: 2020, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
-                {name: 'MyDish', year: 2019, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
-                {name: 'Thursday', year: 2019, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
+                {name: 'MyDish', year: 2019, img: './img/mydish.png', link: 'https://play.google.com/store/apps/details?id=com.lambdaschool.mydish', tech: ['Javascript', 'NodeJS', 'PostgrSQL', 'React Native', 'Redux', 'ExpressJS', 'Jest']},
+                {name: 'Thursday', year: 2019, img: './img/thursday.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
             ]
         }
     }
@@ -70,9 +70,12 @@ class Projects extends Component {
                             {/* <span className='title'>year:</span> */}
                             <span>{this.state.projects[this.state.project_num].year}</span>
                         </div>
-                        <div className='link'>
+                        {this.state.projects[this.state.project_num].link.length
+                        ? <div className='link'>
                             <a href={this.state.projects[this.state.project_num].link}>Visit</a>
                         </div>
+                        : null
+                        }
                     </div>
                     <div className='tech-stack'>
                     {this.state.projects[this.state.project_num].tech.map((tech, idx) =>
