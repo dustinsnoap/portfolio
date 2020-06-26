@@ -131,11 +131,11 @@ class Skills extends Component {
                     </div>
                 </div>
                 <div className='life-story'>
-                    <p>My name is not <span className='highlight'>Gannon Darcy.</span></p>
-                    <p>Full Stack Engineer with experience bridging the gap to help technical and non-technical teams communicate, plan, and organize in order to work exceptionally well together.</p>
-                    <p>Passionate about Cyber Security.</p>
-                    <p>Proven leadership in training others how to program through work as a Teaching Assistant and Team Lead.</p>
-                    <p>Main languages are JavaScript and Python and there frameworks in React and Django.</p>
+                    <p>My name is <span className='highlight'>Dustin Snoap.</span></p>
+                    <p>Full Stack Engineer with experience communicating between, planning, and organizing technical and non-technical teams.</p>
+                    <p>Passionate about finding new and innovative solutions to complicated problems.</p>
+                    <p>Proven leader and mentor through my work as a Team Lead and Section Lead.</p>
+                    <p>Skilled in JavaScript, React, Python, Django, with experience in many other languages.</p>
                     <p>Comfortable working on diverse teams in fast-paced and ambiguous environments, while being able to function autonomously.</p>
                     <p>A proactive self-starter with a passion for learning and growth.</p>
                 </div>
