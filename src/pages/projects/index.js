@@ -14,11 +14,11 @@ class Projects extends Component {
             mouse_pos: {x: 0, y: 0},
             current: 0,
             projects: [
-                {name: 'Legends of Alabastra', year: 2020, img: './img/legends_of_alabastra.png', link: 'https://hungry-spence-d1d30a.netlify.app/', tech: ['Python', 'Django', 'Pusher', 'PostgrSQL', 'React', 'Redux', 'Canvas']},
-                {name: 'LiftQuest', year: 2019, img: './img/liftquest.png', link: 'https://www.liftquestapp.com/', tech: ['React', 'Redux', 'NodeJS', 'PostgreSQL', 'PWA', 'Auth0']},
-                {name: 'Radland', year: 2020, img: './img/legends_of_alabastra.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
-                {name: 'MyDish', year: 2019, img: './img/mydish.png', link: 'https://play.google.com/store/apps/details?id=com.lambdaschool.mydish', tech: ['Javascript', 'NodeJS', 'PostgrSQL', 'React Native', 'Redux', 'ExpressJS', 'Jest']},
-                {name: 'Thursday', year: 2019, img: './img/thursday.png', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
+                {name: 'Legends of Alabastra', year: 2020, img: './img/legends_of_alabastra.png', code: 'https://github.com/Legends-of-Alabastra-ReBorn/LOAR-BE', link: 'https://hungry-spence-d1d30a.netlify.app/', tech: ['Python', 'Django', 'Pusher', 'PostgrSQL', 'React', 'Redux', 'Canvas']},
+                {name: 'LiftQuest', year: 2019, img: './img/liftquest.png', code: 'https://github.com/workout-tracktor/labspt4-workout-tracker-BE', link: 'https://www.liftquestapp.com/', tech: ['React', 'Redux', 'NodeJS', 'PostgreSQL', 'PWA', 'Auth0']},
+                {name: 'Radland', year: 2020, img: './img/legends_of_alabastra.png', code: '', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
+                {name: 'MyDish', year: 2019, img: './img/mydish.png', code: 'https://github.com/Lambda-School-Labs/mydish-be', link: 'https://play.google.com/store/apps/details?id=com.lambdaschool.mydish', tech: ['Javascript', 'NodeJS', 'PostgrSQL', 'React Native', 'Redux', 'ExpressJS', 'Jest']},
+                {name: 'Thursday', year: 2019, img: './img/thursday.png', code: 'https://github.com/build-pt-team-builder/frontend', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
             ]
         }
     }
@@ -63,14 +63,13 @@ class Projects extends Component {
                         </div>
                     </div>
                     <div className='year-link'>
-                        <div className='year'>
-                            {/* <span className='title'>year:</span> */}
-                            <span>{this.state.projects[this.state.project_num].year}</span>
-                        </div>
+                        <span className='year'>{this.state.projects[this.state.project_num].year}</span>
                         {this.state.projects[this.state.project_num].link.length
-                        ? <div className='link'>
-                            <a href={this.state.projects[this.state.project_num].link}>Visit</a>
-                        </div>
+                        ? <a className='link' href={this.state.projects[this.state.project_num].link}>Visit</a>
+                        : null
+                        }
+                        {this.state.projects[this.state.project_num].code.length
+                        ? <a className='code' href={this.state.projects[this.state.project_num].code}>Code</a>
                         : null
                         }
                     </div>
