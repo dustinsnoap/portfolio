@@ -118,10 +118,6 @@ class Skills extends Component {
         this.draw_object({x: 74.5, y: 93.5}, 2, '#222', 0, '', 'circle')
         this.draw_object({x: 80.75, y: 96.5}, 4, '#08F', 130, 'less', 'square')
         this.draw_object({x: 85.25, y: 94.5}, 3, '#222', 30, 'x', 'square')
-        
-        // this.draw_object({x: 76, y: 97}, 1.5, '#222', 0, '', 'circle')
-        // this.draw_object({x: 78, y: 100}, 2, '#222', 0, '', 'circle')
-        
     }
     render = () =>
         <Wrapper className={this.props.classes}>
@@ -129,9 +125,9 @@ class Skills extends Component {
                 <div className='greeting'>
                     <h1>Greetings!</h1>
                     <div className='social'>
-                        <Github />
-                        <LinkedIn />
-                        <Email />
+                        <a href='https://github.com/dustinsnoap'><Github /></a>
+                        <a href='https://www.linkedin.com/in/dustinsnoap/'><LinkedIn /></a>
+                        <a href='mailto:dustinsnoap@gmail.com'><Email /></a>
                     </div>
                 </div>
                 <div className='life-story'>
