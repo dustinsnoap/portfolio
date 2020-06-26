@@ -11,7 +11,7 @@ class Portfolio extends Component {
     constructor() {
         super()
         this.state = {
-            current_page: 2,
+            current_page: 0,
             pages: ['intro','aboutme','projects','contact']
         }
     }
