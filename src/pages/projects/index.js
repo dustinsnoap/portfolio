@@ -24,10 +24,14 @@ class Projects extends Component {
     }
     componentDidMount() {
         this.draw_preview_cover()
+        setInterval(() => {
+            const project_num = this.state.project_num + 1 === this.state.projects.length
+                ? 0 : this.state.project_num + 1
+            this.change_project(project_num)
+        },4200)
     }
     rand_between = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
     draw_preview_cover = () => {
-        // const parent = document.querySelector('.projects .preview')
         const canvas = document.querySelector('.projects .preview .cover')
         const ctx = canvas.getContext('2d')
         canvas.width = canvas.offsetWidth

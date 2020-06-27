@@ -67,19 +67,21 @@ export default Styled.main`
                 }
             } 
             .year-link {
-                width: 80%;
-                margin: 0 1vh 2vh 1vh;
-                color: #ccc;
                 display: flex;
                 justify-content: space-between;
-                font-size: 2vh;
-                text-transform: uppercase;
-                font-family: inconsolata;
+                margin: 0 1vh 2vh 1vh;
+                width: 80%;
                 .year {
-
+                    color: #ccc;
+                    font-family: inconsolata;
+                    font-size: 2vh;
+                    text-transform: uppercase;
                 }
                 .link, .code {
                     color: #08f;
+                    font-family: inconsolata;
+                    font-size: 2vh;
+                    text-transform: uppercase;
                     &:hover {color: #fff}
                 }
             }
