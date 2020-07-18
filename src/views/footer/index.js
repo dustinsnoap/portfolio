@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import Wrapper from './style'
+import Wrapper from './style/'
 
 class Footer extends Component {
     dec = () => {

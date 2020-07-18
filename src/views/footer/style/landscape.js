@@ -1,6 +1,4 @@
-import Styled from 'styled-components'
-
-export default Styled.footer`
+export default `
     height: 10vh;
     width: 100vw;
     bottom: 0;

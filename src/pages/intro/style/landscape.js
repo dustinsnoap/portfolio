@@ -1,6 +1,4 @@
-import Styled from 'styled-components'
-
-export default Styled.main`
+export default `
     position: absolute;
     display: flex;
     align-items: center;

@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 //assets
 import Underline from '../../assets/underline'
 //style
-import Wrapper from './style'
+import Wrapper from './style/'
 
 class Intro extends Component {
     render = () =>
