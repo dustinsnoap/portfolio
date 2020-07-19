@@ -9,10 +9,10 @@ class Intro extends Component {
         <Wrapper className={this.props.classes}>
             <h1>HELLO</h1>
             <div className='subtitle'>
-                <p>Is it me you're looking for?</p>
+                <p className='headline'>Is it me you're looking for?</p>
                 <div className='tags'>
-                    <p>Back-End Architect</p>
-                    <p>Front-End Developer</p>
+                    <p className='tag'>Back-End Architect</p>
+                    <p className='tag'>Front-End Developer</p>
                 </div>
             </div>
         </Wrapper>

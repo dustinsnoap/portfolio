@@ -20,7 +20,7 @@ export default `
         bottom: 0;
         left: 0;
         transform: translate(10vw, -6vh);
-        p {
+        .headline {
             color: #ccc;
             font-family: incolsolata;
             font-family: lora;
@@ -31,7 +31,7 @@ export default `
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            p {
+            .tag {
                 color: #08f;
                 font-size: 3vh;
                 line-height: 5vh;
