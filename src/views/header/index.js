@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 //assets
 import Logo from '../../assets/logo'
 //style
-import Wrapper from './style'
+import Wrapper from './style/'
 
 class Header extends Component {
     add_class = e => {

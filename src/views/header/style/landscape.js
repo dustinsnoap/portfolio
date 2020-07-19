@@ -1,6 +1,4 @@
-import Styled from 'styled-components'
-
-export default Styled.header`
+export default `
     height: 10vh;
     width: 100vw;
     display: flex;
