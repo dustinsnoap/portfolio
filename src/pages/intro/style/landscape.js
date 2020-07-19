@@ -10,21 +10,10 @@ export default `
     &.current{opacity: 100}
     &.left {transform: translateX(-100vw)}
     &.right {transform: translateX(100vw)}
-    header {
-        color: #252525;
-        position: absolute;
-        width: 67vw;
-        svg {
-            font-size: 40px;
-            fill: rgba(0,0,0,0);
-            width: 100%;
-            text {
-                fill: #444;
-                stroke-width: .2px;
-                font-family: 'inconsolata';
-                font-weight: 1000;
-            }
-        }
+    h1 {
+        color: #333;
+        font-size: 50vh;
+        font-family: inconsolata;
     }
     .subtitle {
         position: absolute;
@@ -48,13 +37,6 @@ export default `
                 line-height: 5vh;
                 font-family: neue;
             }
-        }
-        #underline {
-            display: none;
-            fill: #08f;
-            width: 60vmin;
-            position: absolute;
-            transform: translateY(-1vh) translatex(0vw);
         }
     }
 `
