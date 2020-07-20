@@ -6,7 +6,7 @@ export default createGlobalStyle`
     ${reset}
     ${fonts}
     body {
-        overflow: hidden;
+        // overflow: hidden;
         background-color: #111;
         // display: flex;
         // justify-content: flex-start;

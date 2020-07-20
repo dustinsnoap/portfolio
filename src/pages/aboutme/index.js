@@ -6,7 +6,7 @@ import Github from '../../assets/github'
 import LinkedIn from '../../assets/linkedin'
 import Email from '../../assets/email'
 //style
-import Wrapper from './style'
+import Wrapper from './style/'
 
 class Skills extends Component {
     constructor() {

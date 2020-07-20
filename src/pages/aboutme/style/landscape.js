@@ -1,6 +1,4 @@
-import Styled from 'styled-components'
-
-export default Styled.main`
+export default `
     position: absolute;
     display: flex;
     opacity: 0;
@@ -56,5 +54,4 @@ export default Styled.main`
             width: 100%;
         }
     }
-    
-    `
+`
