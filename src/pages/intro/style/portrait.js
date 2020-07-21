@@ -9,7 +9,7 @@ export default `
     h1 {
         font-family: inconsolata;
         color: #333;
-        font-size: 25vh;
+        font-size: 25vw;
     }
     .subtitle {
         display: flex;

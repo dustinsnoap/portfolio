@@ -5,16 +5,17 @@ import fonts from './fonts'
 export default createGlobalStyle`
     ${reset}
     ${fonts}
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
     body {
-        // overflow: hidden;
         background-color: #111;
-        // display: flex;
-        // justify-content: flex-start;
-        // height: 100vh;
     }
     .portfolio {
         overflow: hidden;
         display: flex;
         justify-content: flex-start;
+        
     }
 `
