@@ -131,7 +131,7 @@ class Skills extends Component {
                     </div>
                 </div>
                 <div className='life-story'>
-                    <p>My name is <span className='highlight'>Dustin Snoap.</span></p>
+                    <p>My name is <span className='highlight'>Dustin Snoap</span>.</p>
                     <p>Full Stack Engineer with experience communicating between, planning, and organizing technical and non-technical teams.</p>
                     <p>Passionate about finding new and innovative solutions to complicated problems.</p>
                     <p>Proven leader and mentor through my work as a Team Lead and Section Lead.</p>
