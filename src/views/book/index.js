@@ -5,6 +5,7 @@ import Intro from '../../pages/intro'
 import Aboutme from '../../pages/aboutme'
 import Projects from '../../pages/projects'
 import Contact from '../../pages/contact'
+import Skills from '../../pages/skills'
 //assets
 //style
 import Wrapper from './style'
@@ -40,6 +41,7 @@ class Book extends Component {
         <Wrapper className='book'>
             <Intro classes={get_page_classes('intro', this.props.current_page, this.props.pages)}/>
             <Aboutme classes={get_page_classes('aboutme', this.props.current_page, this.props.pages)}/>
+            <Skills />
             <Projects classes={get_page_classes('projects', this.props.current_page, this.props.pages)}/>
             <Contact classes={get_page_classes('contact', this.props.current_page, this.props.pages)}/>
         </Wrapper>

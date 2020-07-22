@@ -1,8 +1,8 @@
 export default `
-    // height: 200vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
-    // background-color: #784336;
+    background-color: #784336;
     align-items: center;
     .greeting {display: none}
     .skills {display: none}

@@ -8,7 +8,7 @@ import Email from '../../assets/email'
 //style
 import Wrapper from './style/'
 
-class Skills extends Component {
+class Aboutme extends Component {
     constructor() {
         super()
         this.state = {
@@ -140,8 +140,9 @@ class Skills extends Component {
                     <p>A proactive self-starter with a passion for learning and growth.</p>
                 </div>
                 <canvas className='skills'></canvas>
+                
             </div>
         </Wrapper>
 }
 
-export default Skills
+export default Aboutme
