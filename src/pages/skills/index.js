@@ -7,7 +7,7 @@ class Skills extends Component {
     constructor() {
         super()
         this.state = {
-            skills: [
+            technical: [
                 {type: 'language', name: 'Javascript'},
                 {type: 'language', name: 'Python'},
                 {type: 'language', name: 'Golang'},
@@ -21,6 +21,15 @@ class Skills extends Component {
                 {type: 'technology', name: 'SQLite'},
                 {type: 'technology', name: 'Django'},
                 {type: 'technology', name: 'Less'},
+            ],
+            non_technical: [
+                {type: '', name: 'Interpersonal'},
+                {type: '', name: 'Adaptability'},
+                {type: '', name: 'Enthusiasm'},
+                {type: '', name: 'Collaboration'},
+                {type: '', name: 'Creativity'},
+                {type: '', name: 'Detail Oriented'},
+                {type: '', name: 'Planning'},
             ]
         }
     }
@@ -28,14 +37,25 @@ class Skills extends Component {
         <Wrapper className='skills'>
             <h1>Skills</h1>
             <div className='content'>
-                <div className='text'>
-                    <p>Every year I try to learn a new concept; whether that's a new language, a new technology, framework, methodology, etc.</p>
+                <div className='blurb'>
+                    <p>I'm constantly looking for ways to improve myself. Whether it's learning a new technology or a new methodology to share ideas.</p>
                     <p>Below is a list of skills I've picked up over the years. </p>
                 </div>
-                <div className='skills'>
-                {this.state.skills.map(skill =>
-                    <span key={skill.name}>{skill.name}</span>    
-                )}
+                <div className='technical'>
+                    <h2>Technical</h2>
+                    <div className='skills'>
+                    {this.state.technical.map(skill =>
+                        <span key={skill.name}>{skill.name}</span>    
+                    )}
+                    </div>
+                </div>
+                <div className='essential'>
+                    <h2>Essential</h2>
+                    <div className='skills'>
+                    {this.state.non_technical.map(skill =>
+                        <span key={skill.name}>{skill.name}</span>    
+                    )}
+                    </div>
                 </div>
             </div>
             

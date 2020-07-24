@@ -1,11 +1,9 @@
 export default `
     height: 100vh;
-    // width: 100vw;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    padding: 5vw;
+    padding: 0 5vw;
     position: relative;
     h1 {
         font-size: 25vw;
@@ -14,7 +12,7 @@ export default `
     }
     .content {
         width: 100%;
-        .text {
+        .blurb {
             p {
                 font-family: neue;
                 text-align: justify;
@@ -23,16 +21,26 @@ export default `
                 margin: 2vh 0;
             }
         }
-        .skills {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            span {
+        .technical, .essential {
+            h2 {
+                font-size: 5vw;
                 color: #ccc;
-                text-align: center;
-                font-variant: small-caps;
                 font-family: hind;
-                font-size: 4vw;
-                margin: 2vw;
+                font-family: monsterrat;
+                text-align: center;
+                margin: 2vh 0;
+            }
+            .skills {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                span {
+                    color: #ccc;
+                    text-align: center;
+                    font-variant: small-caps;
+                    font-family: hind;
+                    font-size: 4vw;
+                    margin: 2vw;
+                }
             }
         }
     }
