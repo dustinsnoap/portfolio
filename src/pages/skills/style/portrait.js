@@ -1,48 +1,49 @@
 export default `
     height: 100vh;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: 0 5vw;
+    padding: 0 6vw;
     position: relative;
-    h1 {
-        font-size: 25vw;
-        font-family: orbitron;
-        color: #08f;
-    }
     .content {
-        width: 100%;
+        width: 88vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 4vh;
+        h1 {
+            font-size: 22vw;
+            line-height: 22vw;
+            font-family: orbitron;
+            color: #333;
+            font-variant: small-caps;
+        }
         .blurb {
+            display: grid;
+            grid-row-gap: 2vh;
             p {
                 font-family: neue;
-                text-align: justify;
                 color: #ccc;
-                font-size: 4vw;
-                margin: 2vh 0;
+                font-size: 2vh;
             }
         }
         .technical, .essential {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 3vh;
             h2 {
-                font-size: 5vw;
-                color: #ccc;
+                grid-column: span 3;
+                font-size: 3vh;
+                font-variant: small-caps;
+                color: #08f;
                 font-family: hind;
                 font-family: monsterrat;
                 text-align: center;
-                margin: 2vh 0;
             }
-            .skills {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                span {
-                    color: #ccc;
-                    text-align: center;
-                    font-variant: small-caps;
-                    font-family: hind;
-                    font-size: 4vw;
-                    margin: 2vw;
-                }
+            span {
+                color: #ccc;
+                text-align: center;
+                font-variant: small-caps;
+                font-family: hind;
+                font-size: 2vh;
             }
         }
     }
-
 `

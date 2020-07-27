@@ -30,35 +30,31 @@ class Skills extends Component {
                 {type: '', name: 'Creativity'},
                 {type: '', name: 'Detail Oriented'},
                 {type: '', name: 'Planning'},
+                {type: '', name: 'Management'},
             ]
         }
     }
     render = () =>
         <Wrapper className='skills'>
-            <h1>Skills</h1>
             <div className='content'>
+                <h1>Skills</h1>
                 <div className='blurb'>
                     <p>I'm constantly looking for ways to improve myself. Whether it's learning a new technology or a new methodology to share ideas.</p>
                     <p>Below is a list of skills I've picked up over the years. </p>
                 </div>
                 <div className='technical'>
                     <h2>Technical</h2>
-                    <div className='skills'>
                     {this.state.technical.map(skill =>
                         <span key={skill.name}>{skill.name}</span>    
                     )}
-                    </div>
                 </div>
                 <div className='essential'>
                     <h2>Essential</h2>
-                    <div className='skills'>
                     {this.state.non_technical.map(skill =>
                         <span key={skill.name}>{skill.name}</span>    
                     )}
-                    </div>
                 </div>
-            </div>
-            
+            </div>         
         </Wrapper>
 }
 

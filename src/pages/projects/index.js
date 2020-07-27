@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 // import Project from './project'
 //assets
 //style
-import Wrapper from './style.js'
+import Wrapper from './style/'
 
 class Projects extends Component {
     constructor(props) {
