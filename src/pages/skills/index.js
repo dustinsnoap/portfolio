@@ -43,13 +43,13 @@ class Skills extends Component {
                     <p>Below is a list of skills I've picked up over the years. </p>
                 </div>
                 <div className='technical'>
-                    <h2>Technical</h2>
+                    <h3>Technical</h3>
                     {this.state.technical.map(skill =>
                         <span key={skill.name}>{skill.name}</span>    
                     )}
                 </div>
                 <div className='essential'>
-                    <h2>Essential</h2>
+                    <h3>Essential</h3>
                     {this.state.non_technical.map(skill =>
                         <span key={skill.name}>{skill.name}</span>    
                     )}

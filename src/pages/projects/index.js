@@ -24,11 +24,11 @@ class Projects extends Component {
     }
     componentDidMount() {
         this.draw_preview_cover()
-        setInterval(() => {
-            const project_num = this.state.project_num + 1 === this.state.projects.length
-                ? 0 : this.state.project_num + 1
-            this.change_project(project_num)
-        },4200)
+        // setInterval(() => {
+        //     const project_num = this.state.project_num + 1 === this.state.projects.length
+        //         ? 0 : this.state.project_num + 1
+        //     this.change_project(project_num)
+        // },4200)
     }
     rand_between = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
     draw_preview_cover = () => {
@@ -47,9 +47,38 @@ class Projects extends Component {
         })
     }
     change_project = num => this.setState({project_num: num})
+    get_project_location = project_idx => {
+        if(project_idx === (this.state.project_num-1 < 0 ? this.state.projects.length-1 : this.state.project_num-1)) return 'before'
+        if(project_idx === this.state.project_num) return 'current'
+        if(project_idx === (this.state.project_num+1 === this.state.projects.length ? 0 : this.state.project_num+1)) return 'after'
+        return 'hidden'
+    }
     render = () =>
         <Wrapper className={this.props.classes}>
-            <div className='container'>
+            <div className='content'>
+                <h1 className='page-title'>Projects</h1>
+                <div className='projects'>
+                    {this.state.projects.map((project, idx) =>
+                    <div key={project.name} className={`project ${this.get_project_location(idx)}`}>
+                        <h2 className='meta name'>{project.name}</h2>
+                        <img className='preview' alt={project.name} src={project.img}/>
+                        <div className='meta year'>
+                            <span className='title'>Year:</span>
+                            <span className='value'>{project.year}</span>
+                        </div>
+                        <a className='meta link live' href={project.link}>Live</a>
+                        <a className='meta link code' href={project.code}>Code</a>
+                        <div className='meta tech-stack'>
+                            {project.tech.map(tech => 
+                                <span className='tech' key={tech}>{tech}</span>    
+                            )}
+                        </div>
+                    </div>
+                    )}
+                </div>
+            </div>
+            <div className='dead'>
+                <h1 className='title'>Projects</h1>
                 <div className='indicator'>
                 {this.state.projects.map((_,idx) => 
                     <span key={idx}
