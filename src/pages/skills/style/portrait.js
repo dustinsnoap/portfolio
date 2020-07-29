@@ -3,7 +3,6 @@ export default `
     overflow: hidden;
     padding: 0 6vw;
     position: relative;
-    background-color: #979846;
     .content {
         display: grid;
         grid-row-gap: 4vh;
