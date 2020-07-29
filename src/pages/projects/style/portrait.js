@@ -3,9 +3,6 @@ export default `
     overflow: hidden;
     padding: 0 6vw;
     position: relative;
-    .container, .dead {
-        display: none;
-    }
     .content {
         display: grid;
         grid-template-columns: 1fr;
