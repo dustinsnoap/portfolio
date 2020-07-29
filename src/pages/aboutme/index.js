@@ -121,7 +121,8 @@ class Aboutme extends Component {
     }
     render = () =>
         <Wrapper className={this.props.classes}>
-            <div className='container'>
+            <div className='content'>
+                <h1 className='page-title'>About</h1>
                 <div className='greeting'>
                     <h1>Greetings!</h1>
                     <div className='social'>
@@ -130,7 +131,7 @@ class Aboutme extends Component {
                         <a href='mailto:dustinsnoap@gmail.com'><Email /></a>
                     </div>
                 </div>
-                <div className='life-story'>
+                <div className='blurb'>
                     <p>My name is <span className='highlight'>Dustin Snoap</span>.</p>
                     <p>Full Stack Engineer with experience communicating between, planning, and organizing technical and non-technical teams.</p>
                     <p>Passionate about finding new and innovative solutions to complicated problems.</p>
@@ -140,7 +141,6 @@ class Aboutme extends Component {
                     <p>A proactive self-starter with a passion for learning and growth.</p>
                 </div>
                 <canvas className='skills'></canvas>
-                
             </div>
         </Wrapper>
 }

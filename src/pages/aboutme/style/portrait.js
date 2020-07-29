@@ -1,26 +1,30 @@
 export default `
     height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    .greeting {display: none}
-    .skills {display: none}
-    .life-story {
-        padding: 0 5vw;
-        color: #ccc;
-        font-size: 4vw;
-        font-family: hind;
-        .highlight {
-            font-size: 16vw;
-            color: #08f;
+    overflow: hidden;
+    padding: 0 6vw;
+    position: relative;
+    .content {
+        display: grid;
+        grid-template-rows: min-content 1fr;
+        grid-template-columns: 1fr;
+        .greeting {display: none}
+        .skills {display: none}
+        .page-title {
+            color: #333;
             font-family: orbitron;
+            font-size: 16vw;
+            font-variant: small-caps;
+            line-height: 22vw;
         }
-        p {
-            margin: 2vh;
-            &:first-of-type {
-                font-size: 0;
-                margin-bottom: 5vh;
-            }
+        .blurb {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 2vh;
+            color: #ccc;
+            font-size: 3vh;
+            font-family: neue;
+            .highlight {color: #08f}
         }
     }
+    
 `
