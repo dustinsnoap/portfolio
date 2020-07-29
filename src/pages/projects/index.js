@@ -1,6 +1,7 @@
 //imports
 import React, {Component} from 'react'
 //components
+import Project from './components/project'
 // import Project from './project'
 //assets
 //style
@@ -19,110 +20,27 @@ class Projects extends Component {
                 {name: 'Radland', year: 2020, img: './img/legends_of_alabastra.png', code: '', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
                 {name: 'MyDish', year: 2019, img: './img/mydish.png', code: 'https://github.com/Lambda-School-Labs/mydish-be', link: 'https://play.google.com/store/apps/details?id=com.lambdaschool.mydish', tech: ['Javascript', 'NodeJS', 'PostgrSQL', 'React Native', 'Redux', 'ExpressJS', 'Jest']},
                 {name: 'Thursday', year: 2019, img: './img/thursday.png', code: 'https://github.com/build-pt-team-builder/frontend', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
-            ]
+            ],
+            carousel: null,
         }
     }
     componentDidMount() {
-        this.draw_preview_cover()
-        // setInterval(() => {
-        //     const project_num = this.state.project_num + 1 === this.state.projects.length
-        //         ? 0 : this.state.project_num + 1
-        //     this.change_project(project_num)
-        // },4200)
+        console.log('mounted')
+        const carousel = setInterval(() => {
+            let next = this.state.project_num+1
+            if(next === this.state.projects.length) next = 0
+            this.change_project(next)
+        }, 4200)
+        this.setState({carousel: carousel})
     }
-    rand_between = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
-    draw_preview_cover = () => {
-        const canvas = document.querySelector('.projects .preview .cover')
-        const ctx = canvas.getContext('2d')
-        canvas.width = canvas.offsetWidth
-        canvas.height = canvas.offsetHeight
-        const num_of_panels = 5
-        const heights = []
-        for(let i=0; i<num_of_panels; i++) heights.push(this.rand_between(90,100)/100)
-        const width = canvas.width/heights.length
-        ctx.fillStyle = '#111'
-        ctx.fillRect(0,0,canvas.width,canvas.height)
-        heights.forEach((h,i) => {
-            ctx.clearRect(i*width,(canvas.height-(h*canvas.height))/2,width,h*canvas.height)
-        })
-    }
+    // rand_between = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
     change_project = num => this.setState({project_num: num})
-    get_project_location = project_idx => {
-        if(project_idx === (this.state.project_num-1 < 0 ? this.state.projects.length-1 : this.state.project_num-1)) return 'before'
-        if(project_idx === this.state.project_num) return 'current'
-        if(project_idx === (this.state.project_num+1 === this.state.projects.length ? 0 : this.state.project_num+1)) return 'after'
-        return 'hidden'
-    }
     render = () =>
         <Wrapper className={this.props.classes}>
             <div className='content'>
                 <h1 className='page-title'>Projects</h1>
-                <div className='projects'>
-                    {this.state.projects.map((project, idx) =>
-                    <div key={project.name} className={`project ${this.get_project_location(idx)}`}>
-                        <h2 className='meta name'>{project.name}</h2>
-                        <img className='preview' alt={project.name} src={project.img}/>
-                        <div className='meta year'>
-                            <span className='title'>Year:</span>
-                            <span className='value'>{project.year}</span>
-                        </div>
-                        <a className='meta link live' href={project.link}>Live</a>
-                        <a className='meta link code' href={project.code}>Code</a>
-                        <div className='meta tech-stack'>
-                            {project.tech.map(tech => 
-                                <span className='tech' key={tech}>{tech}</span>    
-                            )}
-                        </div>
-                    </div>
-                    )}
-                </div>
+                <Project {...this.state.projects[this.state.project_num]} idx={this.state.project_num} total={this.state.projects.length} _change_project={this.change_project}/>
             </div>
-            <div className='dead'>
-                <h1 className='title'>Projects</h1>
-                <div className='indicator'>
-                {this.state.projects.map((_,idx) => 
-                    <span key={idx}
-                        className={this.state.project_num === idx ? 'current' : null}
-                        onClick={() => this.change_project(idx)}>0{idx+1}
-                    </span>
-                )}
-                </div>
-                <div className='meta-container'>
-                    <div className='name-container'>
-                        <div className='name' style={{transform: `translatey(-${100*this.state.project_num}%)`}}>
-                        {this.state.projects.map((project, idx) =>
-                            <h1 key={idx}>{project.name}</h1>
-                        )}
-                        </div>
-                    </div>
-                    <div className='year-link'>
-                        <span className='year'>{this.state.projects[this.state.project_num].year}</span>
-                        {this.state.projects[this.state.project_num].link.length
-                        ? <a className='link' href={this.state.projects[this.state.project_num].link}>Visit</a>
-                        : null
-                        }
-                        {this.state.projects[this.state.project_num].code.length
-                        ? <a className='code' href={this.state.projects[this.state.project_num].code}>Code</a>
-                        : null
-                        }
-                    </div>
-                    <div className='tech-stack'>
-                    {this.state.projects[this.state.project_num].tech.map((tech, idx) =>
-                        <span key={idx}>{tech}</span>
-                    )}
-                    </div>
-                </div>
-                <div className='preview'>
-                    <div className='image-container' style={{transform: `translatey(-${100*this.state.project_num}%)`}}>
-                    {this.state.projects.map((project, idx) =>
-                        <img key={idx} src={project.img} alt={project.name}/>)
-                    }
-                    {/* <div className='image-cover'></div> */}
-                    </div>
-                    <canvas className='cover'></canvas>
-                </div>
-            </div>
-            
         </Wrapper>
 }
 
