@@ -13,9 +13,18 @@ const Contact = props =>
         <h1 className='page-title'>Contact</h1>
         <div className='content'>
             <h2 className='blurb'>A full commitment's what I'm thinking of.</h2>
-            <a href='https://www.linkedin.com/in/dustinsnoap/'><LinkedIn /></a>
-            <a href='https://github.com/dustinsnoap'><Github /></a>
-            <a href='mailto:dustinsnoap@gmail.com'><Email /></a>
+            <a className='icon' href='https://www.linkedin.com/in/dustinsnoap/'>
+                <LinkedIn />
+                <span>/dustinsnoap/</span>
+            </a>
+            <a className='icon' href='https://github.com/dustinsnoap'>
+                <Github />
+                <span>/dustinsnoap</span>
+            </a>
+            <a className='icon' href='mailto:dustinsnoap@gmail.com'>
+                <Email />
+                <span>dustinsnoap@gmail.com</span>
+            </a>
         </div>
     </Wrapper>
 
