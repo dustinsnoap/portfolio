@@ -39,11 +39,11 @@ class Book extends Component {
     }
     render = () => 
         <Wrapper className='book'>
-            <Intro classes={get_page_classes('intro', this.props.current_page, this.props.pages)}/>
-            <Aboutme classes={get_page_classes('aboutme', this.props.current_page, this.props.pages)}/>
+            <Intro className='farts' classes={get_page_classes('page intro', this.props.current_page, this.props.pages)}/>
+            <Aboutme classes={get_page_classes('page aboutme', this.props.current_page, this.props.pages)}/>
             <Skills />
-            <Projects classes={get_page_classes('projects', this.props.current_page, this.props.pages)}/>
-            <Contact classes={get_page_classes('contact', this.props.current_page, this.props.pages)}/>
+            <Projects classes={get_page_classes('page projects', this.props.current_page, this.props.pages)}/>
+            <Contact classes={get_page_classes('page contact', this.props.current_page, this.props.pages)}/>
         </Wrapper>
 }
 

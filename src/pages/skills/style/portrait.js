@@ -1,33 +1,13 @@
 export default `
-    height: 100vh;
-    overflow: hidden;
-    padding: 0 6vw;
-    position: relative;
     .content {
-        display: grid;
-        grid-row-gap: 4vh;
-        grid-template-columns: 1fr;
-        h1 {
-            color: #333;
-            font-family: orbitron;
-            font-size: 16vw;
-            font-variant: small-caps;
-            line-height: 22vw;
-        }
-        .blurb {
-            display: grid;
-            grid-row-gap: 2vh;
-            p {
-                color: #ccc;
-                font-family: neue;
-                font-size: 2vh;
-            }
-        }
+        grid-template-rows: repeat(3, min-content);
         .technical, .essential {
             display: grid;
-            grid-row-gap: 3vh;
+            grid-row-gap: 2vh;
             grid-template-columns: repeat(3, 1fr);
+            align-items: center;
             h3 {
+                padding: 2.5vh 0;
                 color: #08f;
                 font-family: monsterrat;
                 font-size: 3vh;
@@ -39,7 +19,7 @@ export default `
                 color: #ccc;
                 cursor: pointer;
                 font-family: hind;
-                font-size: 2vh;
+                font-size: 2.5vh;
                 font-variant: small-caps;
                 text-align: center;
                 &:hover { color: #08f }

@@ -37,8 +37,8 @@ class Projects extends Component {
     change_project = num => this.setState({project_num: num})
     render = () =>
         <Wrapper className={this.props.classes}>
+            <h1 className='page-title'>Projects</h1>
             <div className='content'>
-                <h1 className='page-title'>Projects</h1>
                 <Project {...this.state.projects[this.state.project_num]} idx={this.state.project_num} total={this.state.projects.length} _change_project={this.change_project}/>
             </div>
         </Wrapper>

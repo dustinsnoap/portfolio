@@ -1,18 +1,5 @@
 export default `
-    height: 100vh;
-    overflow: hidden;
-    padding: 0 6vw;
-    position: relative;
     .content {
-        display: grid;
-        grid-template-columns: 1fr;
-        .page-title {
-            color: #333;
-            font-family: orbitron;
-            font-size: 16vw;
-            font-variant: small-caps;
-            line-height: 22vw;
-        }
         .project {
             display: grid;
             font-size: 2vh;
@@ -55,7 +42,8 @@ export default `
                 width: 100%;
             }
             .year {
-                .title {margin-right: 2vw}
+                display: flex;
+                h4 {margin-right: 2vw}
                 .value {color: #08f}
             }
             .link {
@@ -69,7 +57,6 @@ export default `
                 grid-column: span 4;
                 align-items: flex-start;
                 .tech {
-                    // font-size: 2vw;
                     margin: 0 2vw 2vh 2vw;
                     &:hover {color: #08f}
                 }

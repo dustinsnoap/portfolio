@@ -12,19 +12,21 @@ const Contact = props =>
     <Wrapper className={props.classes}>
         <h1 className='page-title'>Contact</h1>
         <div className='content'>
-            <h2 className='blurb'>A full commitment's what I'm thinking of.</h2>
-            <a className='icon' href='https://www.linkedin.com/in/dustinsnoap/'>
-                <LinkedIn />
-                <span>/dustinsnoap/</span>
-            </a>
-            <a className='icon' href='https://github.com/dustinsnoap'>
-                <Github />
-                <span>/dustinsnoap</span>
-            </a>
-            <a className='icon' href='mailto:dustinsnoap@gmail.com'>
-                <Email />
-                <span>dustinsnoap@gmail.com</span>
-            </a>
+            <div className='links'>
+                <h2 className='blurb'>A full commitment's what I'm thinking of.</h2>
+                <a className='icon' href='https://www.linkedin.com/in/dustinsnoap/'>
+                    <LinkedIn />
+                    <span>/dustinsnoap/</span>
+                </a>
+                <a className='icon' href='https://github.com/dustinsnoap'>
+                    <Github />
+                    <span>/dustinsnoap</span>
+                </a>
+                <a className='icon' href='mailto:dustinsnoap@gmail.com'>
+                    <Email />
+                    <span>dustinsnoap@gmail.com</span>
+                </a>
+            </div>
         </div>
     </Wrapper>
 
