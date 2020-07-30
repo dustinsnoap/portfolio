@@ -2,11 +2,13 @@ import {createGlobalStyle} from 'styled-components'
 import reset from './reset'
 import fonts from './fonts'
 import portrait from './portrait'
+import landscape from './landscape'
 
 export default createGlobalStyle`
     ${reset}
     ${fonts}
     ${portrait}
+    ${landscape}
     ::-webkit-scrollbar {
         display: none;
     }

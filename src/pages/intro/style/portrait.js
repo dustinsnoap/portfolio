@@ -8,17 +8,15 @@ export default `
             text-align: center;
         }
         .subtitle {
-            .tags {
-                display: flex;
-                flex-direction: column;
-                .tag {
-                    color: #08f;
-                    font-size: 3vw;
-                    font-family: hind;
-                    margin: 1vh 0;
-                    text-align: center;
-                }
-            }
+            font-variant: small-caps;
+        }
+        .tag {
+            color: #08f;
+            font-size: 3vw;
+            font-family: hind;
+            font-variant: small-caps;
+            margin: 1vh 0;
+            text-align: center;
         }
     }
     

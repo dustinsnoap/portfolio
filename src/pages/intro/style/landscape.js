@@ -1,15 +1,31 @@
 export default `
-    // position: absolute;
-    // display: flex;
-    // height: 100vh;
-    // width: 100vw;
-    // background-color: red;
-    // transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-    // &.current{opacity: 100}
-    // &.left {transform: translateX(-100vw)}
-    // &.right {transform: translateX(100vw)}
-    background-color: #797835;
+    background-color: #111;
     width: 100vw;
     height: 100%;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content {
+        display: grid;
+        grid-template-rows: repeat(4, min-content);
+        .title {
+            font-size: 22vh;
+            font-family: orbitron;
+            color: #333;
+        }
+        .subtitle {
+            font-size: 6vh;
+            font-family: hind;
+            font-variant: small-caps;
+            color: #ccc;
+        }
+        .tag {
+            font-family: hind;
+            font-size: 3vh;
+            font-variant: small-caps;
+            color: #08f;
+            padding: 1vh 0;
+        }
+    }
 `
