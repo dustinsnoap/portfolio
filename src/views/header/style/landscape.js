@@ -5,6 +5,7 @@ export default `
     justify-content: space-between;
     align-items: center;
     padding: 0 2vw;
+    position: fixed;
     svg {
         height: 3.75em;
         cursor: pointer;

@@ -4,6 +4,7 @@ export default `
     bottom: 0;
     display: flex;
     justify-content: center;
+    position: fixed;
     align-items: center;
     .forward, .back {
         display: flex;

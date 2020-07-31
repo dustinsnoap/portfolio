@@ -38,9 +38,9 @@ class Portfolio extends Component {
     }
     render = () =>
         <Wrapper className='portfolio'>
-            {/* <Header /> */}
+            <Header />
             <Book pages={this.state.pages} current_page={this.state.current_page}/>
-            {/* <Footer pages={this.state.pages} change_page={this.change_page} current_page={this.state.current_page}/> */}
+            <Footer pages={this.state.pages} change_page={this.change_page} current_page={this.state.current_page}/>
         </Wrapper>
 }
 

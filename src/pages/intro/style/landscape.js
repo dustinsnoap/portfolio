@@ -1,11 +1,14 @@
 export default `
-    background-color: #111;
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    display: flex;
     align-items: center;
+    display: none;
+    height: 100%;
     justify-content: center;
+    position: absolute;
+    transition: transform 2s ease-in-out;
+    width: 100vw;
+    &.prev, &.current, &.next {display: flex}
+    &.prev {transform: translatex(-100vw)};
+    &.next {transform: translatex(100vw)};
     .content {
         display: grid;
         grid-template-rows: repeat(4, min-content);
