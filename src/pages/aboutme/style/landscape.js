@@ -1,57 +1,69 @@
 export default `
-    position: absolute;
-    display: flex;
-    opacity: 0;
+    display: none;
+    flex-direction: column;
     align-items: center;
     height: 100%;
-    width: 100%;
-    justify-content: center;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-    &.current{opacity: 100}
-    &.left {transform: translateX(-100vw)}
-    &.right {transform: translateX(100vw)}
-    .container {
+    padding: 0 2vw 20vh 2vw;
+    transition: transform 2s ease-in-out;
+    width: 100vw;
+    &.prev, &.current, &.next {display: flex}
+    &.prev {transform: translatex(-100vw)};
+    &.next {transform: translatex(100vw)};
+    .page-title {
+        align-self: flex-end;
+        font-size: 18vh;
+        color: #333;
+        font-family: orbitron;
+        text-align: right;
+        font-variant: small-caps;
+    }
+    .content {
         display: grid;
-        grid-template-columns: min-content 1fr;
-        grid-template-rows: 1fr 22%;
-        grid-gap: 2vw;
-        align-items: center;
         width: 80%;
         height: 100%;
-        position: relative;
-        .greeting {
-            h1 {
-                font-size: 10vh;
-                color: #08f;
-                font-family: hind;
-                text-align: right;
-            }
-            .social {
-                display: flex;
-                justify-content: space-around;
+        grid-gap: 4vh;
+        justify-items: center;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: 10vh auto 1fr 10vh;
+        .subtitle {
+            color: #08f;
+            font-size: 9vh;
+            font-family: hind;
+            font-variant: small-caps;
+            grid-column: 1;
+            align-self: start;
+        }
+        .social {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: flex-start;
+            grid-row: 2;
+            a {
+                height: 100%;
                 svg {
-                    height: 3.5vh;
-                    width: 3.5vh;
-                    cursor: pointer;
-                    padding: 2.5vh;
-                    &:hover {fill: #08f}
+                    fill: #ccc;
+                    height: 4vh;
+                    width: 4vh;
                 }
+                &:hover svg {fill: #08f}
             }
         }
-        .life-story {
-            font-size: 2.5vh;
+        .blurb {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 2vh;
             color: #ccc;
-            font-family: neue;
-            p {
-                padding: 1vh 0;
-                .highlight {color: #08f}
-            }
+            font-size: 3vh;
+            font-family: hind;
+            grid-row: span 2;
+            .highlight {color: #08f}
         }
         .skills {
-            grid-column: 1/3;
-            grid-row: 2;
-            height: 100%;
+            grid-row: 3;
+            grid-column: 1 / -1;
             width: 100%;
+            height: 100%;
         }
     }
 `

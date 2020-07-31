@@ -42,7 +42,8 @@ class Aboutme extends Component {
             canvas: canvas,
             ctx: ctx
         })
-        this.draw_objects()
+        window.addEventListener('resize', this.draw_objects())
+        // this.draw_objects()
     }
     update_canvas_size = () => {
         this.setState(prev => {
@@ -120,16 +121,14 @@ class Aboutme extends Component {
         this.draw_object({x: 85.25, y: 94.5}, 3, '#222', 30, 'x', 'square')
     }
     render = () =>
-        <Wrapper className={this.props.classes}>
+        <Wrapper className={`page aboutme ${this.props.classes}`}>
+            <h1 className='page-title'>About</h1>
             <div className='content'>
-                <h1 className='page-title'>About</h1>
-                <div className='greeting'>
-                    <h1>Greetings!</h1>
-                    <div className='social'>
-                        <a href='https://github.com/dustinsnoap'><Github /></a>
-                        <a href='https://www.linkedin.com/in/dustinsnoap/'><LinkedIn /></a>
-                        <a href='mailto:dustinsnoap@gmail.com'><Email /></a>
-                    </div>
+                <h1 className='subtitle'>Greetings!</h1>
+                <div className='social'>
+                    <a href='https://github.com/dustinsnoap'><Github /></a>
+                    <a href='https://www.linkedin.com/in/dustinsnoap/'><LinkedIn /></a>
+                    <a href='mailto:dustinsnoap@gmail.com'><Email /></a>
                 </div>
                 <div className='blurb'>
                     <p>My name is <span className='highlight'>Dustin Snoap</span>.</p>

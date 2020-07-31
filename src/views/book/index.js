@@ -22,11 +22,8 @@ const get_page_classes = (this_page, current_page, pages) => {
     else return `${this_page} right`
 }
 const get_class = (page_name, active_page, pages) => {
-    const max = pages.length-1
     const page_idx = pages.indexOf(page_name)
     if(active_page === page_idx) return 'current'
-    if(active_page === 0 && page_idx === max) return 'prev'
-    if(active_page === max && page_idx === 0) return 'next'
     return page_idx < active_page ? 'prev' : 'next'
 }
 
@@ -49,10 +46,9 @@ class Book extends Component {
         <Wrapper className='book'>
             {/* {console.log(props)} */}
             <Intro classes={get_class('intro', this.props.current_page, this.props.pages)}/>
-            {/* <Aboutme cclasses={get_class(this.props.current_page, this.props.pages)}/> */}
-            {/* <Aboutme classes={get_class(this.props.current_page, this.props.pages)}/> */}
+            <Aboutme classes={get_class('aboutme', this.props.current_page, this.props.pages)}/>
             {/* <Skills /> */}
-            <Projects classes={get_class('projects', this.props.current_page, this.props.pages)}/>
+            {/* <Projects classes={get_class('projects', this.props.current_page, this.props.pages)}/> */}
             {/* <Contact classes={get_class(this.props.current_page, this.props.pages)}/> */}
         </Wrapper>
 }

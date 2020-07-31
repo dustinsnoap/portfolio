@@ -1,7 +1,8 @@
 export default `
     .content {
-        .greeting {display: none}
         .skills {display: none}
+        .social {display: none}
+        .subtitle {display: none}
         grid-template-rows: repeat(2, min-content);
     }
 `
