@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 import Intro from '../../pages/intro'
 import Aboutme from '../../pages/aboutme'
 import Projects from '../../pages/projects'
-// import Contact from '../../pages/contact'
+import Contact from '../../pages/contact'
 import Skills from '../../pages/skills'
 //assets
 //style
@@ -41,7 +41,7 @@ class Book extends Component {
             <Aboutme classes={get_class('aboutme', this.props.current_page, this.props.pages)}/>
             <Skills />
             <Projects classes={get_class('projects', this.props.current_page, this.props.pages)}/>
-            {/* <Contact classes={get_class(this.props.current_page, this.props.pages)}/> */}
+            <Contact classes={get_class('contact', this.props.current_page, this.props.pages)}/>
         </Wrapper>
 }
 

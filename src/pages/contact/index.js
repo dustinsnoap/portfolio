@@ -9,7 +9,7 @@ import Email from '../../assets/email'
 import Wrapper from './style/'
 
 const Contact = props =>
-    <Wrapper className={props.classes}>
+    <Wrapper className={`page contact ${props.classes}`}>
         <h1 className='page-title'>Contact</h1>
         <div className='content'>
             <div className='links'>
