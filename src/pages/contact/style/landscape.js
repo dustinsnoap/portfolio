@@ -29,7 +29,8 @@ export default `
             grid-row-gap: 4vh;
             h2 {
                 align-self: flex-start;
-                font-size: 3vw;
+                font-size: 2.5vw;
+                font-variant: small-caps;
                 color: #08f;
                 font-family: hind;
                 grid-column: span 3;
