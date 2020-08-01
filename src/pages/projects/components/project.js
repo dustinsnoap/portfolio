@@ -13,7 +13,7 @@ const Project = (project) =>
         <a className='meta link code' href={project.code}>Code</a>
         <Indicator current={project.idx} total={project.total} _change_project={project._change_project}/>
         <div className='meta tech-stack'>
-            <h4>Tech:</h4>
+            <h4>Tech</h4>
             {project.tech.map(tech => 
                 <span className='tech' key={tech}>{tech}</span>    
             )}

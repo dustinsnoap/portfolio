@@ -1,135 +1,100 @@
-import Styled from 'styled-components'
-
-export default Styled.main`
+export default `
+    display: none;
+    flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    position: relative;
-    display: flex;
     height: 100%;
-    justify-content: center;
-    opacity: 0;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
-    width: 100%;
-    &.current {opacity: 100}
-    &.left {transform: translateX(-100vw)}
-    &.right {transform: translateX(100vw)}
-    .container {
-        width: 80%;
-        height: 100%;
+    transition: transform 2s ease-in-out;
+    width: 100vw;
+    &.prev, &.current, &.next {display: flex}
+    &.prev {transform: translatex(-100vw)};
+    &.next {transform: translatex(100vw)};
+    .page-title {
+        align-self: flex-end;
+        color: #333;
+        font-family: orbitron;
+        font-size: 18vh;
+        font-variant: small-caps;
+        text-align: right;
+    }
+    .content {
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        .indicator {
-            width: 7.5%;
+        height: 100%;
+        justify-content: center;
+        width: 94vw;
+        .project {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(7vw, min-content)) 1fr repeat(2, min-content);
+            grid-template-rows: repeat(2, min-content) 1fr 10vh;
+            font-family: hind;
+            font-size: 3vh;
+            font-variant: small-caps;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            span {
-                font-size: 2vh;
-                width: 5vh;
-                color: #ccc;
-                font-family: inconsolata;
-                padding: 1.25vh .75vh;
-                &:hover {
-                    border-right: .5vh solid #08f;
-                    color: #fff;
-                }
-                &.current {
-                    border-right: .5vh solid #08f;
-                    color: #fff;
-                }
-            }
-        }
-        .meta-container {
-            width: 32.5%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            .name-container {
-                height: 10vh;
-                width: fit-content;
-                overflow: hidden;
-                z-index: 110;
-                .name {
-                    transition: transform .42s ease-in-out;
-                    height: 100%;
-                    width: fit-content;
-                    h1 {
-                        font-size: 10vh;
-                        font-family: hind;
-                        font-variant: small-caps;
-                        color: #ccc;
-                        white-space: nowrap;
-                        text-shadow: -.2vh 0 #111, 0 .2vh #111, .2vh 0 #111, 0 -.2vh #111;
+            width: 80%;
+            color: #ccc;
+            grid-gap: 2vh;
+            .indicator {
+                grid-row: 2 / span 2;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                span {
+                    height: 1vh;
+                    width: 1vh;
+                    border: .22vh solid #333;
+                    border-radius: 50%;
+                    &.active {
+                        background-color: #08f;
+                        border: none;
                     }
                 }
-            } 
-            .year-link {
-                display: flex;
-                justify-content: space-between;
-                margin: 0 1vh 2vh 1vh;
-                width: 80%;
-                .year {
-                    color: #ccc;
-                    font-family: inconsolata;
-                    font-size: 2vh;
-                    text-transform: uppercase;
-                }
-                .link, .code {
-                    color: #08f;
-                    font-family: inconsolata;
-                    font-size: 2vh;
-                    text-transform: uppercase;
-                    &:hover {color: #fff}
-                }
+            }
+            .name {
+                font-size: 9vh;
+                color: #08f;
+                font-family: hind;
+                font-variant: small-caps;
+                grid-column: 1 / span 3;
+            }
+            .preview {
+                height: 100%;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                grid-row: 2 / span 2;
+                grid-column: 3 / span 2;
+            }
+            .year {
+                grid-row: 1;
+                grid-column: 4;
+                justify-self: end;
+                align-self: end;
+                h4 {display: none;}
+            }
+            .link {
+                font-size: 3vh;
+                grid-row: 2;
+                color: #ccc;
+                &:hover {color: #08f}
             }
             .tech-stack {
-                display: flex;
-                flex-wrap: wrap;
-                span {
-                    font-size: 2vh;
-                    color: #ccc;
-                    font-family: neue;
-                    padding: 1vh;
-                    margin: 1vh;
-                    border: .25vh solid #08f;
-                    border-radius: 5vh;
-                    &:hover {color: #fff}
+                grid-row: 3;
+                grid-column: 1 / span 2;
+                height: fit-content;
+                font-size: 2vh;
+                display: grid;
+                grid-gap: 2vh;
+                grid-template-columns: repeat(2, 1fr);
+                h4 {
+                    font-size: 3vh;
+                    grid-row: 1;
+                    grid-column: 1 / span 2;
+                }
+                .tech {
+                    tect-align: center;
                 }
             }
         }
-        .preview {
-            width: 60%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            width: 48vw;
-            height: 36vw;
-            z-index: 10;
-            .cover {
-                display: block;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-            }
-            .image-container {
-                display: flex;
-                height: 100%;
-                width: 100%;
-                flex-direction: column;
-                position: relative;
-                transition: transform .42s ease-in-out;
-                img {
-                    height: 100%;
-                    width: 100%;
-                    filter: grayscale(33%);
-                }
-                
-            }
-        }
+        
     }
 `

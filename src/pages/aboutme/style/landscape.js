@@ -1,9 +1,10 @@
 export default `
-    display: none;
-    flex-direction: column;
     align-items: center;
+    display: none;
     height: 100%;
-    padding: 0 2vw 20vh 2vw;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
     transition: transform 2s ease-in-out;
     width: 100vw;
     &.prev, &.current, &.next {display: flex}

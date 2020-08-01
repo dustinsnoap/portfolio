@@ -32,11 +32,12 @@ class Projects extends Component {
             this.change_project(next)
         }, 4200)
         this.setState({carousel: carousel})
+        //asdasda
     }
     // rand_between = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
     change_project = num => this.setState({project_num: num})
     render = () =>
-        <Wrapper className={this.props.classes}>
+        <Wrapper className={`page projects ${this.props.classes}`}>
             <h1 className='page-title'>Projects</h1>
             <div className='content'>
                 <Project {...this.state.projects[this.state.project_num]} idx={this.state.project_num} total={this.state.projects.length} _change_project={this.change_project}/>
