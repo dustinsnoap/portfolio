@@ -3,9 +3,10 @@ import React, {Component} from 'react'
 //pages
 import Intro from '../../pages/intro'
 import Aboutme from '../../pages/aboutme'
+import Skills from '../../pages/skills'
 import Projects from '../../pages/projects'
 import Contact from '../../pages/contact'
-import Skills from '../../pages/skills'
+import Resume from '../../pages/resume'
 //assets
 //style
 import Wrapper from './style'
@@ -14,6 +15,7 @@ import Wrapper from './style'
 //current_page: index of current page in pages
 //pages: list of all pages
 const get_class = (page_name, active_page, pages) => {
+    console.log(`pagename ${page_name} -- activepage ${active_page} -- pages ${pages}`)
     const page_idx = pages.indexOf(page_name)
     if(active_page === page_idx) return 'current'
     return page_idx < active_page ? 'prev' : 'next'
@@ -42,6 +44,7 @@ class Book extends Component {
             <Skills />
             <Projects classes={get_class('projects', this.props.current_page, this.props.pages)}/>
             <Contact classes={get_class('contact', this.props.current_page, this.props.pages)}/>
+            <Resume classes={get_class('resume', this.props.current_page, this.props.pages)}/>
         </Wrapper>
 }
 
