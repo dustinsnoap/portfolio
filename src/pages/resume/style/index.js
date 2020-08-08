@@ -7,7 +7,7 @@ export default Styled.main`
     @media (orientation: landscape) {
         ${landscape}
     }
-    @media print {
+    @media (orientation: portrait) {
         ${portrait}
     }
     @media print {
