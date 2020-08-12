@@ -1,9 +1,8 @@
-//imports
 //icons
-import email from '../../../assets/email.svg'
-import github from '../../../assets/github.svg'
-import linkedin from '../../../assets/linkedin.svg'
-import phone from '../../../assets/phone.svg'
+import email from '../assets/svg/email.svg'
+import github from '../assets/svg/github.svg'
+import linkedin from '../assets/svg/linkedin.svg'
+import phone from '../assets/svg/phone.svg'
 
 export default {
     general: [

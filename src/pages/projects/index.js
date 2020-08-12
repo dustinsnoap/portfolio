@@ -4,6 +4,8 @@ import React, {Component} from 'react'
 import Project from './components/project'
 // import Project from './project'
 //assets
+//data
+import data_projects from '../../data/projects'
 //style
 import Wrapper from './style/'
 
@@ -12,15 +14,8 @@ class Projects extends Component {
         super()
         this.state = {
             project_num: 0,
-            mouse_pos: {x: 0, y: 0},
             current: 0,
-            projects: [
-                {name: 'Legends of Alabastra', year: 2020, img: './img/legends_of_alabastra.png', code: 'https://github.com/Legends-of-Alabastra-ReBorn/LOAR-BE', link: 'https://hungry-spence-d1d30a.netlify.app/', tech: ['Python', 'Django', 'Pusher', 'PostgrSQL', 'React', 'Redux', 'Canvas']},
-                {name: 'LiftQuest', year: 2019, img: './img/liftquest.png', code: 'https://github.com/workout-tracktor/labspt4-workout-tracker-BE', link: 'https://www.liftquestapp.com/', tech: ['React', 'Redux', 'NodeJS', 'PostgreSQL', 'PWA', 'Auth0']},
-                {name: 'Radland', year: 2020, img: './img/legends_of_alabastra.png', code: '', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
-                {name: 'MyDish', year: 2019, img: './img/mydish.png', code: 'https://github.com/Lambda-School-Labs/mydish-be', link: 'https://play.google.com/store/apps/details?id=com.lambdaschool.mydish', tech: ['Javascript', 'NodeJS', 'PostgrSQL', 'React Native', 'Redux', 'ExpressJS', 'Jest']},
-                {name: 'Thursday', year: 2019, img: './img/thursday.png', code: 'https://github.com/build-pt-team-builder/frontend', link: '', tech: ['Python', 'Javascript', 'NodeJS', 'PostgrSQL', 'React']},
-            ],
+            projects: data_projects,
             carousel: null,
         }
     }

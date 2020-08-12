@@ -8,11 +8,11 @@ import ContactItem from './components/contact'
 //assets
 import Logo from '../../assets/logo'
 //data
-import data_about from './data/about'
-import data_contact from './data/contact'
-import data_projects from './data/projects'
-import data_experience from './data/experience'
-import data_education from './data/education'
+import data_about from '../../data/about'
+import data_contact from '../../data/contact'
+import data_projects from '../../data/projects'
+import data_experience from '../../data/experience'
+import data_education from '../../data/education'
 //style
 import Wrapper from './style/'
 
