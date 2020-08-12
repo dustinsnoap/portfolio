@@ -1,10 +1,11 @@
 //imports
 import React, {Component} from 'react'
+import SVG from 'react-inlinesvg'
 //components
 //assets
-import Github from '../../assets/github'
-import LinkedIn from '../../assets/linkedin'
-import Email from '../../assets/email'
+//data
+import data_about from '../../data/about'
+import data_contact from '../../data/contact'
 //style
 import Wrapper from './style/'
 
@@ -14,21 +15,8 @@ class Aboutme extends Component {
         this.state = {
             num_of_objects: 10,
             objects: [],
-            skills: [
-                {type: 'language', name: 'javascript'},
-                {type: 'language', name: 'python'},
-                {type: 'language', name: 'go'},
-                {type: 'language', name: 'c++'},
-                {type: 'language', name: 'php'},
-                {type: 'language', name: 'html'},
-                {type: 'language', name: 'css'},
-                {type: 'technology', name: 'react'},
-                {type: 'technology', name: 'node'},
-                {type: 'technology', name: 'postgresql'},
-                {type: 'technology', name: 'sqlite'},
-                {type: 'technology', name: 'django'},
-                {type: 'technology', name: 'less'},
-            ]
+            about: data_about,
+            contact: data_contact
         }
     }
     componentDidMount() {
@@ -126,18 +114,16 @@ class Aboutme extends Component {
             <div className='content'>
                 <h1 className='subtitle'>Greetings!</h1>
                 <div className='social'>
-                    <a href='https://github.com/dustinsnoap'><Github /></a>
-                    <a href='https://www.linkedin.com/in/dustinsnoap/'><LinkedIn /></a>
-                    <a href='mailto:dustinsnoap@gmail.com'><Email /></a>
+                    {this.state.contact.social.map((social, idx) => 
+                        <a key={idx} href={social.link}><SVG src={social.icon} /></a>
+                    )}
+                    <a href={`mailto:${this.state.contact.general[1].value}`}><SVG src={this.state.contact.general[1].icon}/></a>
                 </div>
                 <div className='blurb'>
-                    <p>My name is <span className='highlight'>Dustin Snoap</span>.</p>
-                    <p>Full Stack Engineer with experience communicating between, planning, and organizing technical and non-technical teams.</p>
-                    <p>Passionate about finding new and innovative solutions to complicated problems.</p>
-                    <p>Proven leader and mentor through my work as a Team Lead and Section Lead.</p>
-                    <p>Skilled in JavaScript, React, Python, Django, with experience in many other languages.</p>
-                    <p>Comfortable working on diverse teams in fast-paced and ambiguous environments, while being able to function autonomously.</p>
-                    <p>A proactive self-starter with a passion for learning and growth.</p>
+                    <p>My name is <span className='highlight'>{this.state.about.first_name} {this.state.about.last_name}</span>.</p>
+                    {this.state.about.description.map((p, idx) =>
+                        <p key={idx}>{p}</p>
+                    )}
                 </div>
                 <canvas className='skills'></canvas>
             </div>
