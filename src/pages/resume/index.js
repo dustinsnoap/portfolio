@@ -1,6 +1,5 @@
 //imports
 import React, {Component} from 'react'
-import SVG from 'react-inlinesvg'
 //components
 import Project from './components/project'
 import Experience from './components/experience'
@@ -8,11 +7,6 @@ import Education from './components/education'
 import ContactItem from './components/contact'
 //assets
 import Logo from '../../assets/logo'
-// import Email from '../../assets/email'
-// import email from '../../assets/email.svg'
-
-import Github from '../../assets/github'
-import Linkedin from '../../assets/linkedin'
 //data
 import data_about from './data/about'
 import data_contact from './data/contact'

@@ -124,6 +124,9 @@ export default `
                         font-variant: small-caps;
                         font-weight: 600;
                     }
+                    .description {
+                        font-style: italic;
+                    }
                 }
             }
         }

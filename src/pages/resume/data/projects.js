@@ -27,7 +27,7 @@ export default [
         tech: ['html', 'css', 'react', 'react-native', 'node', 'postgres'],
         description: 'A recipe app that brings the functionality of Github to your cookbook.',
         contributions: [
-            'Led a team of 7 developers to create an app to the specifications to a stakeholder.',
+            'Led a team of developers to create an app to the specifications to a stakeholder.',
             'Wrote an extensive testing library to ensure reliability among the code base.',
             ''
         ]
