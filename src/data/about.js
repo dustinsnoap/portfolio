@@ -21,5 +21,13 @@ export default {
         {type: 'technology', name: 'sqlite'},
         {type: 'technology', name: 'django'},
         {type: 'technology', name: 'less'},
+        {type: 'essential', name: 'Interpersonal'},
+        {type: 'essential', name: 'Adaptability'},
+        {type: 'essential', name: 'Enthusiasm'},
+        {type: 'essential', name: 'Collaboration'},
+        {type: 'essential', name: 'Creativity'},
+        {type: 'essential', name: 'Detail Oriented'},
+        {type: 'essential', name: 'Planning'},
+        {type: 'essential', name: 'Management'},
     ]
 }

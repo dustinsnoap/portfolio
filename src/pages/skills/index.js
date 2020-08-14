@@ -1,5 +1,7 @@
 //imports
 import React, {Component} from 'react'
+//date
+import data_about from '../../data/about'
 //style
 import Wrapper from './style/'
 
@@ -7,31 +9,7 @@ class Skills extends Component {
     constructor() {
         super()
         this.state = {
-            technical: [
-                {type: 'language', name: 'Javascript'},
-                {type: 'language', name: 'Python'},
-                {type: 'language', name: 'Golang'},
-                {type: 'language', name: 'C++'},
-                {type: 'language', name: 'PHP'},
-                {type: 'language', name: 'HTML'},
-                {type: 'language', name: 'CSS'},
-                {type: 'technology', name: 'React'},
-                {type: 'technology', name: 'NodeJS'},
-                {type: 'technology', name: 'PostgreSQL'},
-                {type: 'technology', name: 'SQLite'},
-                {type: 'technology', name: 'Django'},
-                {type: 'technology', name: 'Less'},
-            ],
-            non_technical: [
-                {type: '', name: 'Interpersonal'},
-                {type: '', name: 'Adaptability'},
-                {type: '', name: 'Enthusiasm'},
-                {type: '', name: 'Collaboration'},
-                {type: '', name: 'Creativity'},
-                {type: '', name: 'Detail Oriented'},
-                {type: '', name: 'Planning'},
-                {type: '', name: 'Management'},
-            ]
+            about: data_about
         }
     }
     render = () =>
@@ -44,14 +22,14 @@ class Skills extends Component {
                 </div>
                 <div className='technical'>
                     <h3>Technical</h3>
-                    {this.state.technical.map(skill =>
-                        <span key={skill.name}>{skill.name}</span>    
+                    {this.state.about.skills.filter(skill => skill.type === 'language' || skill.type === 'technology').map(skill =>
+                        <span key={skill.name} className='skill'>{skill.name}</span>   
                     )}
                 </div>
                 <div className='essential'>
                     <h3>Essential</h3>
-                    {this.state.non_technical.map(skill =>
-                        <span key={skill.name}>{skill.name}</span>    
+                    {this.state.about.skills.filter(skill => skill.type === 'essential').map(skill =>
+                        <span key={skill.name} className='skill'>{skill.name}</span>   
                     )}
                 </div>
             </div>         
