@@ -1,6 +1,10 @@
 export default {
     first_name: 'Dustin',
     last_name: 'Snoap',
+    titles: [
+        'Back-End Architect',
+        'Front-End Developer'
+    ],
     summary: 'Software Engineer with a talent for improving code and making it performant.',
     description: [
         'Software Engineer with a talent for improving code and making it performant.  I make things go fast.',
