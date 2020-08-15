@@ -1,10 +1,8 @@
 //imports
 import React from 'react'
-//components
-//assets
-import Github from '../../assets/github'
-import LinkedIn from '../../assets/linkedin'
-import Email from '../../assets/email'
+import SVG from 'react-inlinesvg'
+//data
+import data_contact from '../../data/contact'
 //style
 import Wrapper from './style/'
 
@@ -14,17 +12,15 @@ const Contact = props =>
         <div className='content'>
             <div className='links'>
                 <h2 className='blurb'>A full commitment's what I'm thinking of.</h2>
-                <a className='icon' href='https://www.linkedin.com/in/dustinsnoap/'>
-                    <LinkedIn />
-                    <span>/dustinsnoap/</span>
-                </a>
-                <a className='icon' href='https://github.com/dustinsnoap'>
-                    <Github />
-                    <span>/dustinsnoap</span>
-                </a>
-                <a className='icon' href='mailto:dustinsnoap@gmail.com'>
-                    <Email />
-                    <span>dustinsnoap@gmail.com</span>
+                {data_contact.social.map(item =>
+                    <a key={item.value} className='icon' href={`mailto:${item.value}`}>
+                        <SVG src={item.icon} />
+                        <span>{item.value}</span>
+                    </a>    
+                )}
+                <a className='icon' href={`mailto:${data_contact.general[0].value}`}>
+                    <SVG src={data_contact.general[1].icon} />
+                    <span>{data_contact.general[1].value}</span>
                 </a>
             </div>
         </div>
