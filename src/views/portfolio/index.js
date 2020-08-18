@@ -16,9 +16,23 @@ class Portfolio extends Component {
         }
     }
     componentDidMount() {
+        this.callBackendAPI()
+            .then(res => this.setState({ data: res.express }))
+            .catch(err => console.log(err));
+
+        
         this.update_screen_orientation()
         window.addEventListener('resize',this.update_screen_orientation)
     }
+    callBackendAPI = async () => {
+        const response = await fetch('/express_backend');
+        const body = await response.json();
+    
+        if (response.status !== 200) {
+            throw Error(body.message) 
+        }
+        return body;
+    };
     change_page = page_num => {
         this.setState(() => ({current_page: page_num}))
     }
