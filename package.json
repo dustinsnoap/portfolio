@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://master.d1q023zz0j5841.amplifyapp.com/",
+  "homepage": "./",
   "dependencies": {
     "express": "^4.17.1",
     "react": "^16.13.1",
