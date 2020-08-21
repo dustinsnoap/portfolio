@@ -61,10 +61,10 @@ class Aboutme extends Component {
         }
         //write text
         if(text.length <= 1) {
-            ctx.font = `${size/(text.length*20)}vw arial`
+            ctx.font = `${size/(text.length*15)}vh arial`
             ctx.fillStyle = '#444'
         } else {
-            ctx.font = `${size/(text.length*10)}vw arial`
+            ctx.font = `${size/(text.length*7.5)}vh arial`
             ctx.fillStyle = '#111'
         }
         ctx.fillText(text, 0, 0)
