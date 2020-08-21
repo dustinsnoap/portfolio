@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 //pages
 import Intro from '../../pages/intro'
 import Aboutme from '../../pages/aboutme'
-import Skills from '../../pages/skills'
+// import Skills from '../../pages/skills'
 import Projects from '../../pages/projects'
 import Contact from '../../pages/contact'
 import Resume from '../../pages/resume'
@@ -41,7 +41,7 @@ class Book extends Component {
             {/* {console.log(props)} */}
             <Intro classes={get_class('intro', this.props.current_page, this.props.pages)}/>
             <Aboutme classes={get_class('aboutme', this.props.current_page, this.props.pages)}/>
-            <Skills />
+            {/* <Skills /> */}
             <Projects classes={get_class('projects', this.props.current_page, this.props.pages)}/>
             <Contact classes={get_class('contact', this.props.current_page, this.props.pages)}/>
             <Resume classes={get_class('resume', this.props.current_page, this.props.pages)}/>

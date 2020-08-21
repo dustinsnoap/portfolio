@@ -11,7 +11,7 @@ const Contact = props =>
         <h1 className='page-title'>Contact</h1>
         <div className='content'>
             <div className='links'>
-                <h2 className='blurb'>A full commitment's what I'm thinking of.</h2>
+                <h2 className='blurb'>A full commitments what I'm thinking of.</h2>
                 {data_contact.social.map(item =>
                     <a key={item.value} className='icon' href={`mailto:${item.value}`}>
                         <SVG src={item.icon} />

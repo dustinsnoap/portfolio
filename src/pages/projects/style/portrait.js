@@ -28,6 +28,10 @@ export default `
                     }
                 }
             }
+            .description{ 
+                grid-column: span 4;
+                grid-row: 4;
+            }
             .name {
                 grid-column: span 4;
                 font-size: 7vw;
