@@ -24,7 +24,7 @@ export default `
         .project {
             display: grid;
             grid-template-columns: repeat(2, minmax(7vw, min-content)) 1fr repeat(2, min-content);
-            grid-template-rows: repeat(2, min-content) 1fr 10vh;
+            grid-template-rows: repeat(3, min-content) 1fr 10vh;
             font-family: hind;
             font-size: 3vh;
             font-variant: small-caps;
@@ -33,10 +33,10 @@ export default `
             color: #ccc;
             grid-gap: 2vh;
             .indicator {
-                grid-row: 2 / span 2;
+                grid-row: 2 / span 3;
                 height: 100%;
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 flex-direction: column;
                 span {
                     height: 1vh;
@@ -61,7 +61,7 @@ export default `
                 width: 100%;
                 background-position: center;
                 background-size: cover;
-                grid-row: 2 / span 2;
+                grid-row: 2 / span 3;
                 grid-column: 3 / span 2;
             }
             .year {
@@ -71,14 +71,19 @@ export default `
                 align-self: end;
                 h4 {display: none;}
             }
+            .description {
+                grid-row: 2;
+                grid-column: 1 / span 2;
+                font-size: 2.5vh;
+            }
             .link {
                 font-size: 3vh;
-                grid-row: 2;
+                grid-row: 3;
                 color: #ccc;
                 &:hover {color: #08f}
             }
             .tech-stack {
-                grid-row: 3;
+                grid-row: 4;
                 grid-column: 1 / span 2;
                 height: fit-content;
                 font-size: 2vh;

@@ -125,6 +125,18 @@ class Aboutme extends Component {
                         <p key={idx}>{p}</p>
                     )}
                 </div>
+                <div className='technical'>
+                    <h3>Technical</h3>
+                    {this.state.about.skills.filter(skill => skill.type === 'language' || skill.type === 'technology').map(skill =>
+                        <span key={skill.name} className='skill'>{skill.name}</span>   
+                    )}
+                </div>
+                <div className='essential'>
+                    <h3>Essential</h3>
+                    {this.state.about.skills.filter(skill => skill.type === 'essential').map(skill =>
+                        <span key={skill.name} className='skill'>{skill.name}</span>   
+                    )}
+                </div>
                 <canvas className='skills'></canvas>
             </div>
         </Wrapper>

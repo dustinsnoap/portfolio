@@ -25,7 +25,7 @@ class Projects extends Component {
             let next = this.state.project_num+1
             if(next === this.state.projects.length) next = 0
             this.change_project(next)
-        }, 4200)
+        }, 22000)
         this.setState({carousel: carousel})
         //asdasda
     }
