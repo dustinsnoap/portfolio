@@ -1,11 +1,10 @@
-// import FontName from './fonts/FontName.ttf'
-const FontName = 'delete'
+import Pixel from './fonts/Pixel.ttf'
 
 const fonts = `
-    // @font-face {
-    //     font-family: 'pixel';
-    //     src: url(${FontName}) format('truetype');
-    // }
+    @font-face {
+        font-family: 'pixel';
+        src: url(${Pixel}) format('truetype');
+    }
 `
 
 export default fonts
