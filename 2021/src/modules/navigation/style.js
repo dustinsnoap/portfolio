@@ -3,20 +3,22 @@ import Styled from 'styled-components'
 
 //STYLE
 const Style = Styled.nav`
+    display: block;
     background-color: #334;
     position: fixed;
     width: 100%;
-    box-shadow: 0 0 5px 5px #000;
+    height: 5rem;
+    top: 0;
+    box-shadow: 0 0 .5rem .5rem #000;
     ul {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        height 4em;
-        
+        height: 100%;
         li {
             height: 100%;
-            border-bottom: .2em solid transparent;
-            margin: 0 .1em;
+            border-bottom: .2rem solid transparent;
+            margin: 0 .125rem;
             a {
                 display: flex;
                 align-items: center;
@@ -25,14 +27,14 @@ const Style = Styled.nav`
                 box-sizing: border-box;
                 cursor: pointer;
                 span {
-                    font-size: 1em;
+                    font-size: 1.25rem;
                     font-family: Pixel;
-                    padding: 0 1em;
+                    padding: 0 1.5rem;
                 }
                 
             }
             &:hover, &.active {
-                border-bottom: .2em solid #08f;
+                border-bottom: .25rem solid #08f;
                 a span {color: #08f}
             }
         }
