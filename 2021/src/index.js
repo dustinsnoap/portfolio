@@ -9,6 +9,7 @@ import GlobalStyle from './style'
 import Navigation from './modules/navigation'
 import Header from './modules/header'
 import Skills from './modules/skills'
+import About from './modules/about'
 
 //APP
 ReactDOM.render(
@@ -17,6 +18,7 @@ ReactDOM.render(
     <Navigation />
     <Header />
     <Skills />
+    <About />
   </React.StrictMode>,
   document.getElementById('app')
 )
